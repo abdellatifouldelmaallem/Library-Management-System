@@ -40,3 +40,17 @@ Admin/Librarian
 * Admin can see that how many student have books right now 
 * Admin can find books as per the name of title book
 * Admin can logout
+
+## Technologies
+* HTML 5
+* CSS 3 /  Bootstrap
+* Javascript
+* PHP OOP / MVC
+* MYSQL
+
+## Work to do
+* doing  design of site web by Adobe xd
+* Establish a use case diagram
+* Establish a class diagram
+* create database by MYSQL
+* using the framework Bootstrap for the frontend, and PHP OOP / MVC with PDO for backend
