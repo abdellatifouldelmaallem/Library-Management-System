@@ -37,8 +37,14 @@ Route::get('reader/{id}', [AdminController::class ,'showByIdReader']);
 Route::get('libraries', [AdminController::class ,'indexforlibrary']);
 Route::get('library/{id}', [AdminController::class ,'showByIdLibrary']);
 
-// register for reader
+// register and logout and login for reader
 Route::post('registerReader',[AuthController::class ,'registerReader']);
+Route::post('logoutReader',[AuthController::class ,'logoutForReader']);
+Route::post('loginReader',[AuthController::class ,'loginReader']);
+
+// register  and logout and login for librarian
+Route::post('registerLibrarian',[AuthController::class , 'registerLibrarian']);
+Route::post('loginLibrarian',[AuthController::class , 'loginLibrarian']);
 
 /////////////////////////////////// protecting routes //////////////////////////////////
 
