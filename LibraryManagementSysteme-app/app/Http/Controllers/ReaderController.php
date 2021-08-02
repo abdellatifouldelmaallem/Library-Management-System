@@ -29,6 +29,17 @@ class ReaderController extends Controller
         return $article;
     }
 
+    public function update(Request $request, $id){
+        $article = article::find($id);
+        $article->update([
+            'content'=>$request->content,
+            'reader_id'=>$request->reader_id,
+            'date'=>$request->date,
+        ]);
+        
+        return $article;
+    }
+
 
     public function destroy($id)
     {

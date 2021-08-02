@@ -53,6 +53,7 @@ Route::group(['middleware'=>['auth:sanctum']], function() {
     // for article
     Route::post('AddArticle',[ReaderController::class ,'store']);
     Route::delete('DeleteArticle/{id}', [ReaderController::class,'destroy']);
+    Route::put('EditArticle/{id}',[ReaderController::class, 'update']);
 });
 
 
