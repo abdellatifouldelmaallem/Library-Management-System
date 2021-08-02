@@ -15,6 +15,7 @@ class article extends Model
 
     protected $fillable = [
         'content',
+        'reader_id',
         'date',
     ];
 
