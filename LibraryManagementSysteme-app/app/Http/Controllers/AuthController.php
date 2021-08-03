@@ -37,7 +37,6 @@ class AuthController extends Controller
     }
 
     // logout for reader
-
     public function logoutForReader(Request $request){
         $request->user()->currentAccessToken()->delete();
         
@@ -129,6 +128,13 @@ class AuthController extends Controller
            ];
    
            return response($response, 201);
+    }
+
+    public function logoutLibrarian(Request $request){
+
+        $request->user()->currentAccessToken()->delete();
+        
+        return response('message:log out');
     }
 
 
