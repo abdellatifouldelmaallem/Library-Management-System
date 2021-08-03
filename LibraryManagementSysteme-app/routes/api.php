@@ -45,22 +45,28 @@ Route::post('loginReader',[AuthController::class ,'loginReader']);
 Route::post('registerLibrarian',[AuthController::class , 'registerLibrarian']);
 Route::post('loginLibrarian',[AuthController::class , 'loginLibrarian']);
 
+// register  and logout and login for admin
+Route::post('admin',[AuthController::class , 'register']);
+Route::post('login',[AuthController::class , 'login']);
+
 /////////////////////////////////// protecting routes //////////////////////////////////
 
 Route::group(['middleware'=>['auth:sanctum']], function() {
+    // logout admin
+    Route::post('logout',[AuthController::class ,'logout']);
     
-    Route::post('logoutReader',[AuthController::class ,'logoutForReader']);
     Route::delete('DeleteReader/{id}', [AdminController::class,'destroyforReader']);
-    Route::post('logoutLibrarian',[AuthController::class ,'logoutLibrarian']);
     Route::delete('DeleteLibrary/{id}', [AdminController::class,'destroyforlibrary']);
     // for book
     Route::delete('DeleteBook/{id}', [LibraryController::class,'destroy']);
     Route::put('EditBook/{id}', [LibraryController::class,'update']);
     Route::post('AddBook',[LibraryController::class ,'store']);
+    Route::post('logoutLibrarian',[AuthController::class ,'logoutLibrarian']);
     // for article
     Route::post('AddArticle',[ReaderController::class ,'store']);
     Route::delete('DeleteArticle/{id}', [ReaderController::class,'destroy']);
     Route::put('EditArticle/{id}',[ReaderController::class, 'update']);
+    Route::post('logoutReader',[AuthController::class ,'logoutForReader']);
 });
 
 
