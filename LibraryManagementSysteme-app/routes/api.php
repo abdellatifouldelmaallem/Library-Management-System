@@ -39,7 +39,6 @@ Route::get('library/{id}', [AdminController::class ,'showByIdLibrary']);
 
 // register and logout and login for reader
 Route::post('registerReader',[AuthController::class ,'registerReader']);
-Route::post('logoutReader',[AuthController::class ,'logoutForReader']);
 Route::post('loginReader',[AuthController::class ,'loginReader']);
 
 // register  and logout and login for librarian
@@ -50,7 +49,9 @@ Route::post('loginLibrarian',[AuthController::class , 'loginLibrarian']);
 
 Route::group(['middleware'=>['auth:sanctum']], function() {
     
+    Route::post('logoutReader',[AuthController::class ,'logoutForReader']);
     Route::delete('DeleteReader/{id}', [AdminController::class,'destroyforReader']);
+    Route::post('logoutLibrarian',[AuthController::class ,'logoutLibrarian']);
     Route::delete('DeleteLibrary/{id}', [AdminController::class,'destroyforlibrary']);
     // for book
     Route::delete('DeleteBook/{id}', [LibraryController::class,'destroy']);
