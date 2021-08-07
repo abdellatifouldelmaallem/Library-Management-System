@@ -46,7 +46,7 @@ Route::post('registerLibrarian',[AuthController::class , 'registerLibrarian']);
 Route::post('loginLibrarian',[AuthController::class , 'loginLibrarian']);
 
 // register  and logout and login for admin
-Route::post('admin',[AuthController::class , 'register']);
+Route::post('register',[AuthController::class , 'register']);
 Route::post('login',[AuthController::class , 'login']);
 
 /////////////////////////////////// protecting routes //////////////////////////////////
