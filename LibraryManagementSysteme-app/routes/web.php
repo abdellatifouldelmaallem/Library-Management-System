@@ -36,7 +36,7 @@ Route::get('/register', function () {
 
 Route::get('/dashbord', function () {
    
-    return view('librarain');
+    return view('contact');
 });
 
 // Route::get('/mix', [LibrraryController::class,'mix']);
