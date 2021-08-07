@@ -188,4 +188,126 @@ a:hover{
   height: 76vh;
 }
 
+/* page about us*/
+
+.sectio{
+  width: 100%;
+  min-height: 100vh;
+  background: #41BD8B;
+}
+.conttain{
+  width: 80%;
+  display: block;
+  margin: auto;
+  padding-top: 100px;
+}
+.content-section{
+  float: left;
+  width: 55%;
+}
+.image-section{
+  float: right;
+  width: 40%;
+}
+.image-section img{
+  width: 100%;
+  height: auto;
+}
+.content-section title{
+  text-transform: uppercase;
+  font-size: 30px;
+}
+.content-section .content h3{
+margin-top: 20px;
+font-size: 24px;
+color: blue;
+}
+.content-section .content p{
+  margin-top: 15px;
+  font-family: sans-serif;
+  font-size: 20px;
+  line-height: 1.5;
+}
+.content-section .content .button{
+  margin-top: 30px;
+  
+}
+.content-section .content .button a{
+background-color: rgb(255, 255, 255);
+border-radius: 30px;
+padding: 12px 40px;
+text-decoration: none;
+color: #41BD8B;
+font-size: 30px;
+letter-spacing: 1.5px;
+}
+.content-section .content .button a:hover{
+  background-color: #009d63;
+  color: whitesmoke;
+}
+.content-section .sociel{
+margin-top: 35px;
+}
+.content-section .sociel i{
+  padding: 0px 10px;
+}
+.fa-twitter{
+  color: #32eefc;
+  font-size: 2.5rem;
+}
+.fa-facebook-f{
+  color: #0300c9;
+  font-size: 2.5rem;
+}
+.fa-instagram{
+  color: #e7434ce8;
+  font-size: 2.5rem;
+}
+
+@media screen and (max-width:799px) {
+  .conttain{
+    width: 80%;
+    display: block;
+    margin: auto;
+    padding-top: 50px;
+  }
+
+  .content-section{
+    float: none;
+    width: 100%;
+    display: block;
+    margin: auto;
+  }
+
+  .image-section{
+    float: none;
+    width: 100%;
+    display: block;
+    margin: auto;
+  }
+  .image-section img{
+    width: 100%;
+    height: auto;
+    display: block;
+    margin: auto;
+  }
+
+  .content-section title{
+    text-align: center;
+    font-size: 19px;
+  }
+
+  .content-section .content .button{
+   text-align: center;
+    
+  }
+
+  .content-section .content .button a{
+   padding: 9px 30px;
+    } 
+.content-section .sociel{
+  text-align: center;
+}
+}
+
 

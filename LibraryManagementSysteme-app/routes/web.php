@@ -39,6 +39,11 @@ Route::get('/dashbord', function () {
     return view('contact');
 });
 
+Route::get('/about', function () {
+   
+    return view('about');
+});
+
 // Route::get('/mix', [LibrraryController::class,'mix']);
 
 // Route::get('/find/{id}', [LibrraryController::class,'getAllLibrariesByCity']);
