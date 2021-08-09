@@ -318,7 +318,7 @@ border-radius: 5px;
 .body{
   margin: 0px;
   padding: 0px;
-  height: 100vh;
+  height: 80vh;
 }
 .calendar{
   width: 600px;
@@ -345,7 +345,7 @@ border-radius: 5px;
 .calendar .date dev.day{
   font-weight: 700;
 }
-.active{
+.day17{
   border-radius: 20px ;
   background: #ffffff;
   color: #000000;
@@ -356,7 +356,22 @@ border-radius: 5px;
 .Augest{
   color: white;
 }
+.flich{
+  color: white;
+}
 
+.events{
+  background: #41BD8B;
+  color:#ffffff ;
+  text-decoration: none;
+  
+}
+.events:hover{
+  background: #339970;
+  color:#ffffff ;
+  text-decoration: none;
+  
+}
 
 
 
