@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use App\Models\admin;
 use App\Models\Librarian;
+use App\Models\library;
 use Illuminate\Http\Request;
 use App\Models\reader;
 use Illuminate\Http\Response;
@@ -71,7 +72,7 @@ class AuthController extends Controller
             'email'=>'required|string|unique:reader',
             'password'=>'required|string|confirmed',
         ]);
-        $librarian = Librarian::create([
+        $librarian = library::create([
             'fullName'=>$info['fullName'],
             'nameOfLibrary'=>$info['nameOfLibrary'],
             'email'=>$info['email'],
@@ -92,7 +93,7 @@ class AuthController extends Controller
             'password'=>'required|string',
            ]);
           // check the email
-          $librarian = Librarian::where('email',$request['email'])->first();
+          $librarian = library::where('email',$request['email'])->first();
           //check the password
           if(!$librarian || !Hash::check($request['password'], $librarian->password)){
              return response([

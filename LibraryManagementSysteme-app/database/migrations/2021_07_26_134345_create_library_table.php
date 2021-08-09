@@ -15,8 +15,13 @@ class CreateLibraryTable extends Migration
     {
         Schema::create('library', function (Blueprint $table) {
             $table->id();
-            $table->string('name', 30);
-            $table->string('adress', 50);
+            $table->unsignedBigInteger('admin_id');
+            $table->string('NameOfLibrary', 80);
+            $table->string('adress', 80);
+            $table->string('email', 50);
+            $table->string('password', 20);
+
+            $table->foreign('admin_id')->references('id')->on('admin')->onDelete('cascade');
             $table->timestamps();
         });
     }

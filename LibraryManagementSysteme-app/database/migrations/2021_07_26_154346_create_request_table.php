@@ -15,6 +15,7 @@ class CreateRequestTable extends Migration
     public function up()
     {
         Schema::create('request', function (Blueprint $table) {
+            $table->id();
             $table->unsignedBigInteger('reader_id');
             $table->unsignedBigInteger('book_id');
 

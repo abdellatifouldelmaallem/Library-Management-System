@@ -15,8 +15,12 @@ class library extends Model
     protected $primaryKey= 'id';
 
     protected $fillable = [
-        'name',
+       
+        'admin_id',
+        'NameOfLibrary',
         'adress',
+        'email',
+        'password',
     ];
 
     public function city_library(){

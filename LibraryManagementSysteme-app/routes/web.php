@@ -34,7 +34,7 @@ Route::get('/register', function () {
     return view('register');
 });
 
-Route::get('/dashbord', function () {
+Route::get('/contact', function () {
    
     return view('contact');
 });
@@ -43,6 +43,26 @@ Route::get('/about', function () {
    
     return view('about');
 });
+
+Route::get('/dashbord', function () {
+   
+    return view('librarain');
+})->name("dashboard");
+
+Route::get('/books', function () {
+   
+    return view('books');
+})->name("books");
+
+Route::get('/books/AddBook', function () {
+   
+    return view('Add_Book');
+})->name("AddBook");
+
+Route::get('/books/EditBook', function () {
+   
+    return view('Update_Book');
+})->name("EditBook");
 
 // Route::get('/mix', [LibrraryController::class,'mix']);
 

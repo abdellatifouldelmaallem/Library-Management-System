@@ -17,7 +17,7 @@ class CreateArticleTable extends Migration
             $table->id();
             $table->text('content');
             $table->unsignedBigInteger('reader_id');
-            $table->date('date');
+            $table->string('date');
 
             $table->foreign('reader_id')->references('id')->on('reader')->onDelete('cascade');
             $table->timestamps();
