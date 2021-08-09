@@ -1,16 +1,10 @@
-.btn-outline-primary {
-    color: #000000;
-     border:#000000;
-        }
-        a {
+
+  a {
     color:#000000 ;
     text-decoration: none;
     background-color: transparent;
 }
-a:hover{
-  color: rgb(255, 255, 255)
-  
-}
+
 .btn-outline-primary:hover {
     color: rgb(255, 255, 255);
     background-color: #000000;
@@ -20,6 +14,7 @@ a:hover{
     width: 100%;
     background-image: url("../image/library.jpg");
     background-size: cover;
+    
 
 }
 
@@ -310,5 +305,58 @@ margin-top: 35px;
   text-align: center;
 }
 }
+
+/* new  nav*/
+
+.test:hover{
+  background: #41BD8B;
+color: #ffffff;
+border-radius: 5px;
+}
+
+/* agenda*/
+.body{
+  margin: 0px;
+  padding: 0px;
+  height: 100vh;
+}
+.calendar{
+  width: 600px;
+  height: auto;
+  box-sizing: border-box;
+ background-color: #41BD8B;
+ border-radius: 15px;
+ 
+}
+.calendar .date{
+  padding: 10px;
+  color: rgb(255, 255, 255);
+  display: grid;
+  grid-template-columns: repeat(7, minmax(25px,1fr));
+  grid-gap:10px;
+  box-sizing: border-box;
+}
+.calendar .date dev{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 20px;
+}
+.calendar .date dev.day{
+  font-weight: 700;
+}
+.active{
+  border-radius: 20px ;
+  background: #ffffff;
+  color: #000000;
+  font-weight: 700;
+  cursor: pointer;
+  width: 39%;
+}
+.Augest{
+  color: white;
+}
+
+
 
 
