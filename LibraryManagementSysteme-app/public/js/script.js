@@ -29,3 +29,20 @@ var toggleButton = document.getElementById("menu-toggle");
 toggleButton.onclick = function () {
     el.classList.toggle("toggled");
 };
+// js for owl carousel
+// $('.owl-carousel').owlCarousel({
+//   loop:true,
+//   margin:10,
+//   nav:true,
+//   responsive:{
+//       0:{
+//           items:1
+//       },
+//       600:{
+//           items:3
+//       },
+//       1000:{
+//           items:5
+//       }
+//   }
+// })

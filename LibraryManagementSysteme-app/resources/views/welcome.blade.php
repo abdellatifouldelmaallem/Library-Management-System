@@ -8,6 +8,10 @@
     <link rel="stylesheet" href="{{ asset('css/app.css') }}">
     <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css" 
     integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p" crossorigin="anonymous"/>
+    <!-- owl carousel min.css-->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.carousel.min.css" integrity="sha512-tS3S5qG0BlhnQROyJXvNjeEM4UpMXHrQfTGmbQ1gKmelCxlSEBUaxhRBj/EFTzpbP4RVSrpEikbmdJobCvhE3g==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <!-- owl carousel them.css-->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.theme.default.min.css" integrity="sha512-sMXtMNL1zRzolHYKEujM2AqCLUR9F2C4/05cdbxjjLSRvMQIciEPCQZo++nk7go3BtSuK9kfa/s+a4f4i5pLkw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
     <link rel="stylesheet" href="{{ asset('css/style.css') }}">
 
     <title>Document</title>
@@ -90,28 +94,79 @@
               </div>
             </div>
             
-            <div class=" ml-5 ">
-             <div class=" border bg-light shadow  rounded p-4 ">
+            <div class=" ml-5 parentEvents ">
+             <div class=" border bg-light shadow  rounded p-4 childEvent ">
                <span>All Day | Aug 17 | All Libraries</span>
                <h3>Byram Shubert Library Closed</h3>
              </div>
-             <div class=" border bg-light shadow rounded mt-4 p-4">
+             <div class=" border bg-light shadow rounded mt-4 p-4 childEvent">
                <span>10:00 am | Aug 17 | Baxter Courtyard</span>
                <h3>Summer Storytime in the Courtyard at Greenwich Library</h3>
              </div>
              <div class="mt-4 " >
-               <a href="" class="border shadow rounded events  p-3"> View All Today's Events
+               <a href="" class="border shadow rounded event  p-3"> View All Today's Events
                  <i class="fas fa-arrow-right p-2 pt-1"></i></a>
              </div>
             </div>
           </div>
           <!-- Agenda end here-->
 
-          <!-- cards start here-->
-    
+          <!-- cards for BOOK start here-->
+        <section class="container-fluid my-4 books">
+          <h1 class="text-center fw-bold display-1 mb-4">Top Books NowDays</h1>
+          <div class="row mt-5">
+            <div class="owl-carousel owl-theme">
 
-          <section class="cards shadow">
-            {{-- <h1 class="text-center">What Are Reader Said ?</h1> --}}
+              <div class="item mb-4">
+                <div class="card border-0 shadow">
+                  <img src="{{asset('image/about.jpg')}}" class="card-img-top" alt="">
+                  <div class="card-body">
+                    <h3></h3>
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Aut omnis nisi praesentium.</p>
+                   <div>
+                    <span>23$</span>
+                    <span><a href="">buy now</a></span>
+                   </div>
+                  </div>
+                </div>
+              </div>
+             <!--item ends-->
+              <div class="item mb-4">
+                <div class="card border-0 shadow">
+                  <img src="{{asset('image/login.jpg')}}" class="card-img-top" alt="">
+                  <div class="card-body">
+                    <h3></h3>
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Aut omnis nisi praesentium.</p>
+                   <div>
+                    <span>23$</span>
+                    <span><a href="">buy now</a></span>
+                   </div>
+                  </div>
+                </div>
+              </div>
+             <!--item ends-->
+              <div class="item mb-4">
+                <div class="card border-0 shadow">
+                  <img src="{{asset('image/addBook.jpg')}}" class="card-img-top" alt="">
+                  <div class="card-body">
+                    <h3></h3>
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Aut omnis nisi praesentium.</p>
+                   <div>
+                    <span>23$</span>
+                    <span><a href="">buy now</a></span>
+                   </div>
+                  </div>
+                </div>
+              </div>
+             <!--item ends-->
+          </div>
+          </div>
+        </section>
+          <!-- cards  for BOOK end here-->
+
+          <!-- cards for article start here-->
+          <div class="cards shadow">
+            <h1 class="text-center titileOfReader mb-4">What Are Reader Said ?</h1>
             <div class="card_post bg-light shadow">
               <div class="card_img">
                 <img src="{{asset('image/about.jpg')}}" class="w-100" alt="">
@@ -126,67 +181,38 @@
               </div>
             </div>
 
-          </section>
-        
-
-          {{-- <hr class="featurette-divider"> --}}
-
-          {{-- <div class="row featurette  border bg-light mx-4 rounded shadow">
-            <div class="col-md-7">
-              <div class="d-flex flex-column justify-content-between">
-               <div> <h1 class="">ABDELLATIF OULDELMAALLEM</h1></div>
-              <div>  <P class="">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Debitis, earum nihil porro corrupti rem voluptatum pariatur reiciendis totam vitae atque sed, animi consequuntur unde maiores labore est? Aliquid, quibusdam molestias?</P></div>
-               <div> <h3 class="float-end">2020/02/02</h3></div>
+            <div class="card_post bg-light shadow my-4">
+              <div class="card_img">
+                <img src="{{asset('image/about.jpg')}}" class="w-100" alt="">
               </div>
-            
-              {{-- <h2 class="featurette-heading">First featurette heading.
-                 <span class="text-muted">It’ll blow your mind.</span>
-                </h2>
-              <p class="lead">Some great placeholder content for the first featurette here. Imagine some exciting prose here.</p> --}}
-            {{-- </div>
-            <div class="col-md-5">
-              <img src="{{asset('image/addBook.jpg')}}" alt="image" style=" object-fit: cover;" class="hight img-fulid w-100">
-            
-            </div> --}}
-          {{-- </div> --}} 
-      
-          {{-- <hr class="featurette-divider"> --}}
-      
-          {{-- <div class="row featurette border bg-light mx-4 rounded shadow">
-            <div class="col-md-7 order-md-2">
-              <h2 class="featurette-heading">Oh yeah, it’s that good. <span class="text-muted">See for yourself.</span></h2>
-              <p class="lead">Another featurette? Of course. More placeholder content here to give you an idea of how this layout would work with some actual real-world content in place.</p>
+              <div class="card_info">
+                <div class="card_date">
+                  <span> sunday  October   23   2021</span>
+                  <span class="nameReader">Name of Reader</span>
+                </div>
+                <h1 class="card_title">why should we read ?</h1>
+                <p class="card_text"> Lorem ipsum dolor sit amet consectetur adipisicing elit. Adipisci tempore mollitia vel dolor obcaecati reprehenderit ex deleniti cum facilis exercitationem illum consequatur harum quia quidem, doloribus omnis ipsum ut fuga!</p>
+              </div>
             </div>
-            <div class="col-md-5 order-md-1">
-              <img src="{{asset('image/addBook.jpg')}}" alt="image" style=" object-fit: cover;" class="hight img-fulid w-100">
-      
-            </div>
-          </div>
-      
-          <hr class="featurette-divider">
-      
-          <div class="row featurette border bg-light mx-4 rounded shadow">
-            <div class="col-md-7">
-              <h2 class="featurette-heading">And lastly, this one. <span class="text-muted">Checkmate.</span></h2>
-              <p class="lead">And yes, this is the last block of representative placeholder content. Again, not really intended to be actually read, simply here to give you a better view of what this would look like with some actual content. Your content.</p>
-            </div>
-            <div class="col-md-5">
-              <img src="{{asset('image/addBook.jpg')}}" alt="image" style=" object-fit: cover;" class="hight img-fulid w-100">
-      
-            </div>
-          </div>
-      
-          <hr class="featurette-divider"> --}}
-      
 
-          <!-- cards end here-->
-          
+            <div class="card_post bg-light shadow">
+              <div class="card_img">
+                <img src="{{asset('image/about.jpg')}}" class="w-100" alt="">
+              </div>
+              <div class="card_info">
+                <div class="card_date">
+                  <span> sunday  October   23   2021</span>
+                  <span class="nameReader">Name of Reader</span>
+                </div>
+                <h1 class="card_title">why should we read ?</h1>
+                <p class="card_text"> Lorem ipsum dolor sit amet consectetur adipisicing elit. Adipisci tempore mollitia vel dolor obcaecati reprehenderit ex deleniti cum facilis exercitationem illum consequatur harum quia quidem, doloribus omnis ipsum ut fuga!</p>
+              </div>
+            </div>
 
-  
+          </div>
+        <!-- cards for article end here-->
+
   </div>
-
-
-        
 
         <!-- footer start here-->
         <footer class="bg-dark text-white pt-5 pb-4">
@@ -265,6 +291,34 @@
     </div>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta3/dist/js/bootstrap.bundle.min.js"></script>
     <script src="{{ asset('js/script.js') }}"></script>
-</body>
+    
+    <!-- include cdn files  -->
+    
+    
+    <!--jquery cdn   -->
+    
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js" integrity="sha512-894YE6QWD5I59HgZOGReFYm4dnWc1Qt5NtvYSaNcOP+u1T9qYdvdihz0PPSiiqn/+/3e7Jo4EaG7TubfWGUrMQ==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    
+    <!-- Owl carousel Min.js  -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/owl.carousel.min.js" integrity="sha512-bPs7Ae6pVvhOSiIcyUClR7/q2OAsRiovw4vAkX+zJbw3ShAeeqezq50RIIcIURq7Oa20rW2n2q+fyXBNcU9lrw==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <script>
+      $('.owl-carousel').owlCarousel({
+    loop:true,
+    margin:10,
+    nav:true,
+    responsive:{
+        0:{
+            items:1
+        },
+        600:{
+            items:3
+        },
+        1000:{
+            items:3
+        }
+    }
+})
+    </script>
+  </body>
 
 </html>
