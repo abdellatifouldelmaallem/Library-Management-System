@@ -106,11 +106,78 @@
             </div>
           </div>
           <!-- Agenda end here-->
-          
+
           <!-- cards start here-->
+    
 
+          <section class="cards shadow">
+            {{-- <h1 class="text-center">What Are Reader Said ?</h1> --}}
+            <div class="card_post bg-light shadow">
+              <div class="card_img">
+                <img src="{{asset('image/about.jpg')}}" class="w-100" alt="">
+              </div>
+              <div class="card_info">
+                <div class="card_date">
+                  <span> sunday  October   23   2021</span>
+                  <span class="nameReader">Name of Reader</span>
+                </div>
+                <h1 class="card_title">why should we read ?</h1>
+                <p class="card_text"> Lorem ipsum dolor sit amet consectetur adipisicing elit. Adipisci tempore mollitia vel dolor obcaecati reprehenderit ex deleniti cum facilis exercitationem illum consequatur harum quia quidem, doloribus omnis ipsum ut fuga!</p>
+              </div>
+            </div>
 
+          </section>
+        
 
+          {{-- <hr class="featurette-divider"> --}}
+
+          {{-- <div class="row featurette  border bg-light mx-4 rounded shadow">
+            <div class="col-md-7">
+              <div class="d-flex flex-column justify-content-between">
+               <div> <h1 class="">ABDELLATIF OULDELMAALLEM</h1></div>
+              <div>  <P class="">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Debitis, earum nihil porro corrupti rem voluptatum pariatur reiciendis totam vitae atque sed, animi consequuntur unde maiores labore est? Aliquid, quibusdam molestias?</P></div>
+               <div> <h3 class="float-end">2020/02/02</h3></div>
+              </div>
+            
+              {{-- <h2 class="featurette-heading">First featurette heading.
+                 <span class="text-muted">It’ll blow your mind.</span>
+                </h2>
+              <p class="lead">Some great placeholder content for the first featurette here. Imagine some exciting prose here.</p> --}}
+            {{-- </div>
+            <div class="col-md-5">
+              <img src="{{asset('image/addBook.jpg')}}" alt="image" style=" object-fit: cover;" class="hight img-fulid w-100">
+            
+            </div> --}}
+          {{-- </div> --}} 
+      
+          {{-- <hr class="featurette-divider"> --}}
+      
+          {{-- <div class="row featurette border bg-light mx-4 rounded shadow">
+            <div class="col-md-7 order-md-2">
+              <h2 class="featurette-heading">Oh yeah, it’s that good. <span class="text-muted">See for yourself.</span></h2>
+              <p class="lead">Another featurette? Of course. More placeholder content here to give you an idea of how this layout would work with some actual real-world content in place.</p>
+            </div>
+            <div class="col-md-5 order-md-1">
+              <img src="{{asset('image/addBook.jpg')}}" alt="image" style=" object-fit: cover;" class="hight img-fulid w-100">
+      
+            </div>
+          </div>
+      
+          <hr class="featurette-divider">
+      
+          <div class="row featurette border bg-light mx-4 rounded shadow">
+            <div class="col-md-7">
+              <h2 class="featurette-heading">And lastly, this one. <span class="text-muted">Checkmate.</span></h2>
+              <p class="lead">And yes, this is the last block of representative placeholder content. Again, not really intended to be actually read, simply here to give you a better view of what this would look like with some actual content. Your content.</p>
+            </div>
+            <div class="col-md-5">
+              <img src="{{asset('image/addBook.jpg')}}" alt="image" style=" object-fit: cover;" class="hight img-fulid w-100">
+      
+            </div>
+          </div>
+      
+          <hr class="featurette-divider"> --}}
+      
 
           <!-- cards end here-->
           
