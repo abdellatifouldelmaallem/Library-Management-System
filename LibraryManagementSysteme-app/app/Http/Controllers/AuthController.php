@@ -13,8 +13,13 @@ class AuthController extends Controller
         if (Auth::user()->type == "reader") {
             return redirect(route('ReaderDash'));
         }
+        else if(Auth::user()->type == "admin"){
+           return redirect(route('adminDash'));
+        }
 
         return redirect(route('LibraryDash'));
     }
+
+    
 
 }

@@ -24,14 +24,19 @@ Route::get('/', function () {
    
     return view('welcome');
 });
-Route::get('/home', ['AuthController::class' ,'isLogin']);
+Route::get('/home', [AuthController::class ,'isLogin']);
 
 Route::get('/ReaderDash', function () {
     return view('ReaderDash');
-});
+})->name('ReaderDash');
+
 Route::get('/LibraryDash', function () {
     return view('LibraryDash');
-});
+})->name('LibraryDash');
+
+Route::get('/adminDash', function () {
+    return view('adminDash');
+})->name('adminDash');
 
 // Route::get('/login', function () {
    
@@ -43,19 +48,16 @@ Route::get('/LibraryDash', function () {
 //     return view('register');
 // })->name("register");
 
-Route::get('/contact', function () {
-   
+Route::get('/contact', function () {  
     return view('contact');
 })->name("contact");
 
-Route::get('/about', function () {
-   
+Route::get('/about', function () {  
     return view('about');
 })->name("about");
 
-Route::get('/dashbord', function () {
-   
-    return view('librarain');
+Route::get('/dashbord', function () {   
+    return view('LibraryDash');
 })->name("dashboard");
 
 Route::get('/books', function () {
