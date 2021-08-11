@@ -12,6 +12,16 @@
                 <div class="col-lg-7 text-center py-5">
                     <h1 class="animate__animated animate__heartBeat animate__infinite">welcome :)</h1>
 
+                    @if ($errors->any())
+                    <div class="alert alert-danger">
+                        <ul>
+                            @foreach ($errors->all() as $error)
+                                <li>{{ $error }}</li>
+                            @endforeach
+                        </ul>
+                    </div>
+                @endif
+
                     <form class="d-flex flex-column" method="POST" action="{{route('register')}}">
                         @csrf
                         <div class="form-row py-3 pt-5">
@@ -56,6 +66,20 @@
                                 </span>
                               @enderror
                             </div>
+                        </div>
+                        <div class="form-row py-3">
+                            <div class="form-check">
+                                <input class="form-check-input" type="radio" name="type" id="flexRadioDefault1" value="librarian">
+                                <label class="form-check-label" for="flexRadioDefault1">
+                                  librarian
+                                </label>
+                              </div>
+                              <div class="form-check">
+                                <input class="form-check-input" type="radio" name="type" id="flexRadioDefault2" value="reader" checked>
+                                <label class="form-check-label" for="flexRadioDefault2">
+                                 reader
+                                </label>
+                              </div>
                         </div>
 
                         <div class="form-row py-3">

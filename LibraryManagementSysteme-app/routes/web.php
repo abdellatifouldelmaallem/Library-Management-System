@@ -6,6 +6,7 @@ use App\Models\city;
 use App\Models\library;
 use App\Models\reader;
 use Carbon\Factory;
+use App\Http\Controllers\AuthController;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -22,6 +23,14 @@ use Illuminate\Support\Facades\Route;
 Route::get('/', function () {
    
     return view('welcome');
+});
+Route::get('/home', ['AuthController::class' ,'isLogin']);
+
+Route::get('/ReaderDash', function () {
+    return view('ReaderDash');
+});
+Route::get('/LibraryDash', function () {
+    return view('LibraryDash');
 });
 
 // Route::get('/login', function () {
