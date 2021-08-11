@@ -9,7 +9,8 @@ class LibraryController extends Controller
 {
 
     public function index(){
-        return book::all();
+        $books=book::all();
+        return view('library.books',compact('books'));
     }
 
     public function showById($id){

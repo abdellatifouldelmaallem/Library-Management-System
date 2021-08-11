@@ -18,14 +18,22 @@
                     <div class="form-row py-3 pt-5">
                         <div class="offset-1 col-lg-10">
                             <input type="email" name="email" class="inp px-3" placeholder="entre your email" value="">
-
+                            @error('email')
+                            <span class="invalid-feedback" role="alert">
+                              <strong>{{ $message }}</strong>
+                            </span>
+                          @enderror
                         </div>
                         
                     </div>
                     <div class="form-row py-3">
                         <div class="offset-1 col-lg-10">
                             <input type="password" name="password" class="inp px-3" placeholder="entre your password" value="">
-
+                            @error('password')
+                            <span class="invalid-feedback" role="alert">
+                              <strong>{{ $message }}</strong>
+                            </span>
+                          @enderror
                         </div>
                     </div>
 

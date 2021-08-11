@@ -7,6 +7,7 @@ use App\Models\library;
 use App\Models\reader;
 use Carbon\Factory;
 use App\Http\Controllers\AuthController;
+use App\Http\Controllers\LibraryController;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -31,7 +32,7 @@ Route::get('/ReaderDash', function () {
 })->name('ReaderDash');
 
 Route::get('/LibraryDash', function () {
-    return view('LibraryDash');
+    return view('library.LibraryDash');
 })->name('LibraryDash');
 
 Route::get('/adminDash', function () {
@@ -57,13 +58,10 @@ Route::get('/about', function () {
 })->name("about");
 
 Route::get('/dashbord', function () {   
-    return view('LibraryDash');
+    return view('library.LibraryDash');
 })->name("dashboard");
 
-Route::get('/books', function () {
-   
-    return view('books');
-})->name("books");
+Route::get('/books', [LibraryController::class,'index'])->name("books");
 
 Route::get('/books/AddBook', function () {
    

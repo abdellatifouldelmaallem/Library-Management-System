@@ -61,19 +61,21 @@
                       
                       <div class="table-responsive-sm bg-white rounded shadow-sm text-center">
                         <table class="table">
+                            @foreach ( $books as $book )
                             <tr>
-                                <th >1</th>
-                                <td>Television</td>
-                                <td>Jonny</td>
-                                <td>jshdyhgbfr</td>
-                                <td>$1200</td>
-                                <td>mohemzd</td>
-                                <td>physique</td>
+                                <th >{{ $book->id }}</th>
+                                <td>{{ $book->name }}</td>
+                                <td>{{ $book->image }}</td>
+                                <td>{{ $book->description }}</td>
+                                <td>{{ $book->price }}</td>
+                                <td>{{ $book->auther_id }}</td>
+                                <td>{{ $book->category_id }}</td>
                                 <td>
                                     <a href="" class="btn btn-danger">Delete</a>
                                     <a href="{{ route('EditBook')}}" class="btn btn-success">Edit</a>
                                 </td>
                             </tr>
+                            @endforeach
                         </table>
                       </div>
                       

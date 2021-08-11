@@ -18,8 +18,16 @@
                      class="fas fa-book-reader"></i>  Readers</a>
                 <a href="#" class="list-group-item list-group-item-action bg-transparent second-text fw-bold"><i 
                     class="fas fa-home"></i>  Libraries</a>
-                <a href="#" class="list-group-item list-group-item-action bg-transparent text-danger fw-bold"><i
-                        class="fas fa-power-off me-2"></i>  Logout</a>
+                    <a  class="list-group-item list-group-item-action bg-transparent text-danger fw-bold" href="#.">
+                        <form method="post" action="{{route('logout')}}"  onclick="event.preventDefault();
+                        document.getElementById('logout-form').submit();">
+                          @csrf
+                          <i class="fas fa-power-off me-2"></i> Logout
+                        </form>
+                      </a>
+                      <form id="logout-form" action="{{ route('logout') }}" method="POST" style="display: none;">
+                          @csrf
+                      </form>
             </div>
         </div>
         <!-- /#sidebar-wrapper -->
@@ -43,7 +51,7 @@
                         <li class="nav-item dropdown">
                             <a class="nav-link dropdown-toggle second-text fw-bold" href="#" id="navbarDropdown"
                                 role="button" data-bs-toggle="dropdown" aria-expanded="false">
-                                <i class="fas fa-user me-2"></i>  John Doe
+                                <i class="fas fa-user me-2"></i>
                             </a>
                             <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
                                 <li><a class="dropdown-item" href="#">Profile</a></li>
