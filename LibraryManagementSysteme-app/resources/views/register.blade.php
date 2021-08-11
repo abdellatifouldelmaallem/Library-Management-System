@@ -12,32 +12,49 @@
                 <div class="col-lg-7 text-center py-5">
                     <h1 class="animate__animated animate__heartBeat animate__infinite">welcome :)</h1>
 
-                    <form class="d-flex flex-column">
+                    <form class="d-flex flex-column" method="POST" action="{{route('register')}}">
+                        @csrf
                         <div class="form-row py-3 pt-5">
                             <div class="offset-1 col-lg-10">
-                                <input type="email" class="inp px-3" placeholder="entre your fullName">
-
+                                <input type="text" name="name" class="inp px-3" placeholder="entre your fullName">
+                                @error('name')
+                                <span class="invalid-feedback" role="alert">
+                                  <strong>{{ $message }}</strong>
+                                </span>
+                              @enderror
                             </div>
                             
                         </div>
                         <div class="form-row py-3">
                             <div class="offset-1 col-lg-10">
-                                <input type="email" class="inp px-3" placeholder="entre your email">
-
+                                <input type="email" name="email" class="inp px-3" placeholder="entre your email">
+                                @error('email')
+                                <span class="invalid-feedback" role="alert">
+                                  <strong>{{ $message }}</strong>
+                                </span>
+                              @enderror
                             </div>
                         </div>
 
                         <div class="form-row py-3">
                             <div class="offset-1 col-lg-10">
-                                <input type="password" class="inp px-3" placeholder="entre your password">
-
+                                <input type="password" name="password" class="inp px-3" placeholder="entre your password">
+                                @error('password')
+                                <span class="invalid-feedback" role="alert">
+                                  <strong>{{ $message }}</strong>
+                                </span>
+                              @enderror
                             </div>
                         </div>
 
                         <div class="form-row py-3">
                             <div class="offset-1 col-lg-10">
-                                <input type="password" class="inp px-3" placeholder="confirm your password">
-
+                                <input type="password" name="password_confirmation" class="inp px-3" placeholder="confirm your password">
+                                @error('password_confirmation')
+                                <span class="invalid-feedback" role="alert">
+                                  <strong>{{ $message }}</strong>
+                                </span>
+                              @enderror
                             </div>
                         </div>
 

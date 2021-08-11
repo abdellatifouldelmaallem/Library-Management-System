@@ -26,10 +26,10 @@
             <h3 class="float-md-start mt-0 my-2 ">Logo</h3>
             <nav class="nav nav-masthead justify-content-end float-md-end my-2 px-3">
               <a class="nav-link active test " aria-current="page" href="#">Home</a>
-              <a class="nav-link test" href="#">About us</a>
-              <a class="nav-link test" href="#">Contact us</a>
-              <a class="nav-link test" href="#">Account</a>
-              <a class="nav-link test" href="#">Sign up</a>
+              <a class="nav-link test" href="{{ route('about')}}">About us</a>
+              <a class="nav-link test" href="{{ route('contact')}}">Contact us</a>
+              <a class="nav-link test" href="{{ route('login')}}">Account</a>
+              <a class="nav-link test" href="{{ route('register')}}">Sign up</a>
               <form>
                 <input class="form-control " type="text" placeholder="Search" aria-label="Search">
               </form>
@@ -113,18 +113,46 @@
 
           <!-- cards for BOOK start here-->
         <section class="container-fluid my-4 books">
-          <h1 class="text-center fw-bold display-1 mb-4">Top Books NowDays</h1>
+          <h1 class="text-center fw-bold  my-4">Top Books NowDays</h1>
           <div class="row mt-5">
             <div class="owl-carousel owl-theme">
 
               <div class="item mb-4">
                 <div class="card border-0 shadow">
-                  <img src="{{asset('image/about.jpg')}}" class="card-img-top" alt="">
+                  <img src="{{asset('image/show3.jpg')}}" class="card-img-top" alt="">
                   <div class="card-body">
-                    <h3></h3>
+                    <h3>Black is for Hate</h3>
                     <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Aut omnis nisi praesentium.</p>
-                   <div>
-                    <span>23$</span>
+                   <div class="d-flex  justify-content-between">
+                    <span class="buy fw-bold ">23$</span>
+                    <span><a href="">Buy now</a></span>
+                   </div>
+                  </div>
+                </div>
+              </div>
+             <!--item ends-->
+              <div class="item mb-4">
+                <div class="card border-0 shadow">
+                  <img src="{{asset('image/show4.jpg')}}" class="card-img-top" alt="">
+                  <div class="card-body">
+                    <h3>Larry McMurtry</h3>
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Aut omnis nisi praesentium.</p>
+                   <div class="d-flex  justify-content-between">
+                    <span class="buy fw-bold ">23$</span>
+                    <span><a href="" >Buy now</a></span>
+                   </div>
+                  </div>
+                </div>
+              </div>
+             <!--item ends-->
+              <div class="item mb-4">
+                <div class="card border-0 shadow">
+                  <img src="{{asset('image/show3.jpg')}}" class="card-img-top" alt="">
+                  <div class="card-body">
+                    <h3>Black is for Hate</h3>
+                    <p class="fw-bolder">Lorem ipsum dolor sit amet consectetur adipisicing elit. Aut omnis nisi praesentium.</p>
+                   <div class="d-flex  justify-content-between">
+                    <span class="buy fw-bold ">23$</span>
                     <span><a href="">buy now</a></span>
                    </div>
                   </div>
@@ -133,13 +161,13 @@
              <!--item ends-->
               <div class="item mb-4">
                 <div class="card border-0 shadow">
-                  <img src="{{asset('image/login.jpg')}}" class="card-img-top" alt="">
+                  <img src="{{asset('image/show2.jpg')}}" class="card-img-top" alt="">
                   <div class="card-body">
-                    <h3></h3>
+                    <h3>THE WICKED + THE DIVINE</h3>
                     <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Aut omnis nisi praesentium.</p>
-                   <div>
-                    <span>23$</span>
-                    <span><a href="">buy now</a></span>
+                   <div class="d-flex  justify-content-between">
+                    <span class="buy fw-bold ">23$</span>
+                    <span><a href="">Buy now</a></span>
                    </div>
                   </div>
                 </div>
@@ -147,13 +175,13 @@
              <!--item ends-->
               <div class="item mb-4">
                 <div class="card border-0 shadow">
-                  <img src="{{asset('image/addBook.jpg')}}" class="card-img-top" alt="">
+                  <img src="{{asset('image/show1.jpg')}}" class="card-img-top" alt="">
                   <div class="card-body">
-                    <h3></h3>
+                    <h3>RICH DADA POOR DADA</h3>
                     <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Aut omnis nisi praesentium.</p>
-                   <div>
-                    <span>23$</span>
-                    <span><a href="">buy now</a></span>
+                   <div class="d-flex  justify-content-between">
+                    <span class="buy fw-bold ">23$</span>
+                    <span ><a href="">Buy now</a></span>
                    </div>
                   </div>
                 </div>
@@ -167,7 +195,7 @@
           <!-- cards for article start here-->
           <div class="cards shadow">
             <h1 class="text-center titileOfReader mb-4">What Are Reader Said ?</h1>
-            <div class="card_post bg-light shadow">
+            <div class="card_post  shadow">
               <div class="card_img">
                 <img src="{{asset('image/about.jpg')}}" class="w-100" alt="">
               </div>
@@ -181,7 +209,7 @@
               </div>
             </div>
 
-            <div class="card_post bg-light shadow my-4">
+            <div class="card_post  shadow my-4">
               <div class="card_img">
                 <img src="{{asset('image/about.jpg')}}" class="w-100" alt="">
               </div>
@@ -195,7 +223,7 @@
               </div>
             </div>
 
-            <div class="card_post bg-light shadow">
+            <div class="card_post  shadow">
               <div class="card_img">
                 <img src="{{asset('image/about.jpg')}}" class="w-100" alt="">
               </div>

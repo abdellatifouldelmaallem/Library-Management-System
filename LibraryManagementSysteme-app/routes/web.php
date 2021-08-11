@@ -24,25 +24,25 @@ Route::get('/', function () {
     return view('welcome');
 });
 
-Route::get('/login', function () {
+// Route::get('/login', function () {
    
-    return view('login');
-});
+//     return view('login');
+// })->name("login");
 
-Route::get('/register', function () {
+// Route::get('/register', function () {
    
-    return view('register');
-});
+//     return view('register');
+// })->name("register");
 
 Route::get('/contact', function () {
    
     return view('contact');
-});
+})->name("contact");
 
 Route::get('/about', function () {
    
     return view('about');
-});
+})->name("about");
 
 Route::get('/dashbord', function () {
    

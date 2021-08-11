@@ -13,17 +13,18 @@
             <div class="col-lg-7 text-center py-5">
                 <h1 class="animate__animated animate__heartBeat animate__infinite">welcome back</h1>
 
-                <form class="d-flex flex-column">
+                <form class="d-flex flex-column" method="POST" action="{{route('login')}}">
+                    @csrf
                     <div class="form-row py-3 pt-5">
                         <div class="offset-1 col-lg-10">
-                            <input type="email" class="inp px-3" placeholder="entre your email">
+                            <input type="email" name="email" class="inp px-3" placeholder="entre your email" value="">
 
                         </div>
                         
                     </div>
                     <div class="form-row py-3">
                         <div class="offset-1 col-lg-10">
-                            <input type="password" class="inp px-3" placeholder="entre your password">
+                            <input type="password" name="password" class="inp px-3" placeholder="entre your password" value="">
 
                         </div>
                     </div>
