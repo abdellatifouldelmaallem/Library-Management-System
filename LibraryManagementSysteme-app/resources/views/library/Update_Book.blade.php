@@ -15,33 +15,36 @@
 
         <div class="row">
             <div class="col-lg-6 shadow rounded p-3">
-                <form action="" method="POST" enctype="multipart/form-data">
+                <form action="{{route('updateBook',$books['id'])}}"  method="POST" enctype="multipart/form-data">
                 @csrf
                 <div class="row">
+
+                    <input type="hidden" name="id" value="{{$books['id']}}" class="form-control py-4" placeholder="enter th name">
+
                     <div class="col md-3 ">
                         <label class="form-label">Name of the book :</label>
-                        <input type="text" name="name" class="form-control py-4" placeholder="enter th name">
+                        <input type="text" name="name" value="{{$books['name']}}" class="form-control py-4" placeholder="enter th name">
                     </div>
                     <div class="col md-3">
                         <label class="form-label"> price :</label>
-                        <input type="text" name="price" class="form-control py-4" placeholder="enter price with coin">
+                        <input type="text" name="price" value="{{$books['price']}}" class="form-control py-4" placeholder="enter price with coin">
                     </div>
                 </div>
                 
                 <div class="md-3 py-2">
                     <label class="form-label"> imge :</label>
-                    <input type="file" name="image" class="form-control py-4">
+                    <input type="file" name="image" value="{{$books['image']}}" class="form-control py-4">
                 </div>
                 <div class="md-3 py-2">
                     <label class="form-label">Descriptin :</label>
-                   <textarea name="description" class="form-control" placeholder="write some description about book" rows="2"></textarea>
+                   <textarea name="description"  class="form-control" placeholder="write some description about book" rows="2">{{$books['description']}}</textarea>
                 </div>
                 <div class="md-3 py-2">
                     <label for="cars">Choose an auther:</label>
                     <select id="cars" name="cars">
                         <option value=""></option>  
                     @foreach ($authers as $auther )
-                        <option value="">{{ $auther->fullName}}</option>  
+                    <option {{ $auther->id == $books->auther_id ? 'selected' : '' }} value="{{$auther->id}}">{{ $auther->fullName}}</option>  
                         @endforeach
                     </select>
                 </div>
@@ -50,13 +53,14 @@
                     <select id="cars" name="cars">
                         <option value=""></option> 
                     @foreach ( $categories as $category)
-                        <option value="">{{$category->name}}</option> 
+                    <option {{ $category->id == $books->category_id ? 'selected' : '' }} value="{{$category->id}}">{{ $category->name}}</option>  
                         @endforeach
                     </select>
                 </div>
+                <button type="submit" class="btn btn-primary">Register</button>
+                <a href="{{route('dashboard')}}" class="btn btn-danger">Cancel</a>
             </form>
               <div class="pt-2">
-                  <a href="" class="btn btn-primary">submit</a>
               </div>
             </div>
            <!-- part of image-->

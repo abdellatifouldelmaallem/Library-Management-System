@@ -52,13 +52,21 @@ Route::get('/dashbord', function () {
     return view('library.LibraryDash');
 })->name("dashboard");
 
-Route::get('/books', [LibraryController::class,'index'])->name("books");
 
 Route::get('/books/AddBook', [LibraryController::class , 'createForAdd'])->name("AddBook");
 
 Route::get('/books/EditBook', [LibraryController::class , 'createForEdit'] )->name("EditBook");
 
+// crud for book 
+Route::get('/books', [LibraryController::class,'index'])->name("books");
+
+Route::get('/books/edit/{id}', [LibraryController::class,'showById'])->name('edit.Book');
+
+Route::post('/books/update/{id}', [LibraryController::class,'update'])->name('updateBook');
+
 Route::post('/books/NewBook', [LibraryController::class ,'store'])->name('NewBook');
+
+
 
 
 

@@ -45,11 +45,11 @@
 
 
                     <div class="table-responsive  bg-white rounded shadow-sm ">
-                        <table class="table ">
+                        <table class="table text-center  ">
                             <tr >
-                                <th scope="col" width="50">#</th>
+                                <th scope="col" width="50" >#</th>
                                 <th scope="col">name</th>
-                                <th scope="col">image</th>
+                                <th scope="col" >image</th>
                                 <th scope="col">description</th>
                                 <th scope="col">Price</th>
                                 <th scope="col">auther_id</th>
@@ -72,7 +72,7 @@
                                 <td>{{ $book->category->name }}</td>
                                 <td>
                                     <a href="" class="btn btn-danger">Delete</a>
-                                    <a href="{{ route('EditBook')}}" class="btn btn-success">Edit</a>
+                                    <a href="{{ route('edit.Book',$book['id'])}}" class="btn btn-success">Edit</a>
                                 </td>
                             </tr>
                             @endforeach
