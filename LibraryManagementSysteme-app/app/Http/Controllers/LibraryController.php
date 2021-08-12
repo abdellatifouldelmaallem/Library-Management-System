@@ -36,27 +36,31 @@ class LibraryController extends Controller
 
 
     public function store(Request $request){
-
+          return $request;
         $request->validate([
             'name'=>'required',
             'price'=>'required|float',
             'image'=>'required|mins:jpg,png,jpeg|max:5048',
             'description'=>'required',
-            'auther_id'=>'required',
-            'category_id'=>'required',
+            'auther'=>'required',
+            'category'=>'required',
         ]);
 
+        $newImage=time() . "-" . $request->name .'.' . 
+        $request->image->extension();
+
+        $request->image->move(public_path('image'),$newImage);
 
         $books = book::create([
             'name'=>$request->input('name'),
-            // 'image'=>$request->input('image'),
-            'description'=>$request->input('description'),
             'price'=>$request->input('price'),
+            'image'=>$newImage,
+            'description'=>$request->input('description'),
             'auther_id'=>$request->input('auther_id'),
             'category_id'=>$request->input('category_id'),
         ]);
 
-        return redirect('/routes/web.php');
+        return redirect('/dashbord');
     }
     
 

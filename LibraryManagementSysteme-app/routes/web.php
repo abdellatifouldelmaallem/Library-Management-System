@@ -58,6 +58,17 @@ Route::get('/books/AddBook', [LibraryController::class , 'createForAdd'])->name(
 
 Route::get('/books/EditBook', [LibraryController::class , 'createForEdit'] )->name("EditBook");
 
+Route::post('/books/NewBook', [LibraryController::class ,'store'])->name('NewBook');
+
+
+
+
+
+
+
+
+
+
 // Route::get('/mix', [LibrraryController::class,'mix']);
 
 // Route::get('/find/{id}', [LibrraryController::class,'getAllLibrariesByCity']);

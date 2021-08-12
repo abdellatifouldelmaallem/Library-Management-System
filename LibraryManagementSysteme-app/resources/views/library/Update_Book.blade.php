@@ -39,16 +39,18 @@
                 <div class="md-3 py-2">
                     <label for="cars">Choose an auther:</label>
                     <select id="cars" name="cars">
+                        <option value=""></option>  
                     @foreach ($authers as $auther )
-                        <option value="volvo">{{ $auther->fullName}}</option>  
+                        <option value="">{{ $auther->fullName}}</option>  
                         @endforeach
                     </select>
                 </div>
                 <div class="md-3 py-2">
                     <label for="cars">Choose an category:</label>
                     <select id="cars" name="cars">
+                        <option value=""></option> 
                     @foreach ( $categories as $category)
-                        <option value="volvo">{{$category->name}}</option> 
+                        <option value="">{{$category->name}}</option> 
                         @endforeach
                     </select>
                 </div>
