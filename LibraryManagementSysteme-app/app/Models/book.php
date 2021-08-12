@@ -23,11 +23,11 @@ class book extends Model
     ];
 
     public function auther(){
-        return $this->hasMany(auther::class);
+        return $this->belongsTo(auther::class);
     }
 
     public function category(){
-        return $this->hasMany(category::class);
+        return $this->belongsTo(category::class);
     }
 
     public function library(){

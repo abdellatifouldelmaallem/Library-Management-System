@@ -39,15 +39,6 @@ Route::get('/adminDash', function () {
     return view('adminDash');
 })->name('adminDash');
 
-// Route::get('/login', function () {
-   
-//     return view('login');
-// })->name("login");
-
-// Route::get('/register', function () {
-   
-//     return view('register');
-// })->name("register");
 
 Route::get('/contact', function () {  
     return view('contact');
@@ -63,15 +54,9 @@ Route::get('/dashbord', function () {
 
 Route::get('/books', [LibraryController::class,'index'])->name("books");
 
-Route::get('/books/AddBook', function () {
-   
-    return view('Add_Book');
-})->name("AddBook");
+Route::get('/books/AddBook', [LibraryController::class , 'createForAdd'])->name("AddBook");
 
-Route::get('/books/EditBook', function () {
-   
-    return view('Update_Book');
-})->name("EditBook");
+Route::get('/books/EditBook', [LibraryController::class , 'createForEdit'] )->name("EditBook");
 
 // Route::get('/mix', [LibrraryController::class,'mix']);
 

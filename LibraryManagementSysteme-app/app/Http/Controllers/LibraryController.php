@@ -2,32 +2,61 @@
 
 namespace App\Http\Controllers;
 
+use App\Models\auther;
 use App\Models\book;
+use App\Models\category;
 use Illuminate\Http\Request;
 
 class LibraryController extends Controller
 {
 
     public function index(){
-        $books=book::all();
+        $books=book::with(['auther','category'])->get();
         return view('library.books',compact('books'));
     }
 
-    public function showById($id){
-        $book=book::find($id);
-        return $book;
+    
+
+    // public function showById($id){
+    //     $book=book::find($id);
+    //     return $book;
+    // }
+// get names of category and auther in addBook
+    public function createForAdd(){
+        $authers=auther::all();
+        $categories = category::all();
+        return view('library.Add_Book',compact('authers','categories'));
+    }
+// get names of category and auther in EditBook
+    public function createForEdit(){
+        $authers=auther::all();
+        $categories = category::all();
+        return view('library.Update_book',compact('authers','categories'));
     }
 
 
     public function store(Request $request){
-        return book::create([
-            'name'=>$request->name,
-            'image'=>$request->image,
-            'description'=>$request->description,
-            'price'=>$request->price,
-            'auther_id'=>$request->auther_id,
-            'category_id'=>$request->category_id,
+
+        $request->validate([
+            'name'=>'required',
+            'price'=>'required|float',
+            'image'=>'required|mins:jpg,png,jpeg|max:5048',
+            'description'=>'required',
+            'auther_id'=>'required',
+            'category_id'=>'required',
         ]);
+
+
+        $books = book::create([
+            'name'=>$request->input('name'),
+            // 'image'=>$request->input('image'),
+            'description'=>$request->input('description'),
+            'price'=>$request->input('price'),
+            'auther_id'=>$request->input('auther_id'),
+            'category_id'=>$request->input('category_id'),
+        ]);
+
+        return redirect('/routes/web.php');
     }
     
 

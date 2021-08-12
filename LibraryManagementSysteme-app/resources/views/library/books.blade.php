@@ -68,8 +68,8 @@
                                 <td>{{ $book->image }}</td>
                                 <td>{{ $book->description }}</td>
                                 <td>{{ $book->price }}</td>
-                                <td>{{ $book->auther_id }}</td>
-                                <td>{{ $book->category_id }}</td>
+                                <td>{{ $book->auther->fullName }}</td>
+                                <td>{{ $book->category->name }}</td>
                                 <td>
                                     <a href="" class="btn btn-danger">Delete</a>
                                     <a href="{{ route('EditBook')}}" class="btn btn-success">Edit</a>

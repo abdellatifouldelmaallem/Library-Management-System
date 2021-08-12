@@ -17,7 +17,7 @@ class auther extends Model
         'fullName',
     ];
 
-   public function book_auther(){
-       return $this->belongsTo(book::class);
+   public function books(){
+       return $this->hasMany(book::class);
    }
 }

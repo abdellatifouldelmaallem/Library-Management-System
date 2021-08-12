@@ -39,20 +39,18 @@
                 <div class="md-3 py-2">
                     <label for="cars">Choose an auther:</label>
                     <select id="cars" name="cars">
-                        <option value="volvo">Volvo XC90</option>
-                        <option value="saab">Saab 95</option>
-                        <option value="mercedes">Mercedes SLK</option>
-                        <option value="audi">Audi TT</option>
-                      </select>
+                    @foreach ($authers as $auther )
+                        <option value="volvo">{{ $auther->fullName}}</option>  
+                        @endforeach
+                    </select>
                 </div>
                 <div class="md-3 py-2">
                     <label for="cars">Choose an category:</label>
                     <select id="cars" name="cars">
-                        <option value="volvo">Volvo XC90</option>
-                        <option value="saab">Saab 95</option>
-                        <option value="mercedes">Mercedes SLK</option>
-                        <option value="audi">Audi TT</option>
-                      </select>
+                    @foreach ( $categories as $category)
+                        <option value="volvo">{{$category->name}}</option> 
+                        @endforeach
+                    </select>
                 </div>
             </form>
               <div class="pt-2">
