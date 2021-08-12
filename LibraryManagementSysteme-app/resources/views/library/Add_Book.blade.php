@@ -62,7 +62,7 @@
                     <select id="cars" name="auther">
                         <option value=""></option> 
                     @foreach ($authers as $auther )
-                        <option value="" >{{ $auther->fullName}}</option>  
+                        <option value="{{ $auther->id}}" >{{ $auther->fullName}}</option>  
                         @endforeach
                         @error('auther')
                    <span>{{$message}}</span>
@@ -75,7 +75,7 @@
                     <select id="cars" name="category">
                         <option value=""></option> 
                     @foreach ( $categories as $category)
-                        <option value="" >{{$category->name}}</option> 
+                        <option value="{{ $category->id}}" >{{$category->name}}</option> 
                         @endforeach
                         @error('category')
                         <span>{{$message}}</span>
@@ -83,9 +83,11 @@
                         @enderror
                     </select>
                 </div>
+                <button type="submit" class="btn btn-primary">submit</button>
+                <a href="{{route('dashboard')}}" class="btn btn-danger">Back</a>
             </form>
               <div class="pt-2">
-                  <a href="" class="btn btn-primary">submit</a>
+                  
               </div>
             </div>
            <!-- part of image-->

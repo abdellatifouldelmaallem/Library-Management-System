@@ -36,11 +36,11 @@ class LibraryController extends Controller
 
 
     public function store(Request $request){
-          return $request;
+         
         $request->validate([
             'name'=>'required',
-            'price'=>'required|float',
-            'image'=>'required|mins:jpg,png,jpeg|max:5048',
+            'price'=>'required|numeric',
+            'image'=>'required|mimes:jpg,png,jpeg|max:5048',
             'description'=>'required',
             'auther'=>'required',
             'category'=>'required',
@@ -56,8 +56,8 @@ class LibraryController extends Controller
             'price'=>$request->input('price'),
             'image'=>$newImage,
             'description'=>$request->input('description'),
-            'auther_id'=>$request->input('auther_id'),
-            'category_id'=>$request->input('category_id'),
+            'auther_id'=>$request->input('auther'),
+            'category_id'=>$request->input('category'),
         ]);
 
         return redirect('/dashbord');
