@@ -8,6 +8,7 @@ use App\Models\reader;
 use Carbon\Factory;
 use App\Http\Controllers\AuthController;
 use App\Http\Controllers\LibraryController;
+use App\Http\Controllers\ReaderController;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -25,20 +26,6 @@ Route::get('/', function () {
    
     return view('welcome');
 });
-Route::get('/home', [AuthController::class ,'isLogin']);
-
-Route::get('/ReaderDash', function () {
-    return view('ReaderDash');
-})->name('ReaderDash');
-
-Route::get('/LibraryDash', function () {
-    return view('library.LibraryDash');
-})->name('LibraryDash');
-
-Route::get('/adminDash', function () {
-    return view('adminDash');
-})->name('adminDash');
-
 
 Route::get('/contact', function () {  
     return view('contact');
@@ -47,11 +34,23 @@ Route::get('/contact', function () {
 Route::get('/about', function () {  
     return view('about');
 })->name("about");
+Route::get('/home', [AuthController::class ,'isLogin']);
 
+
+
+
+Route::get('/LibraryDash', function () {
+        return view('library.LibraryDash');
+    })->name('LibraryDash');
+    
+    Route::get('/adminDash', function () {
+    return view('adminDash');
+})->name('adminDash');
+
+////////////////////////////////////////////////special for library and books///////////////////////////////////////////
 Route::get('/dashbord', function () {   
     return view('library.LibraryDash');
 })->name("dashboard");
-
 
 Route::get('/books/AddBook', [LibraryController::class , 'createForAdd'])->name("AddBook");
 
@@ -66,17 +65,24 @@ Route::post('/books/update/{id}', [LibraryController::class,'update'])->name('up
 
 Route::post('/books/NewBook', [LibraryController::class ,'store'])->name('NewBook');
 
+Route::get('/books/{id}', [LibraryController::class ,'delete'])->name('delete.book');
+
+///////////////////////////////////////////////////special for reader and articles////////////////////////////////////////////////////
+
+Route::get('/ReaderDash', function () {
+    return view('reader.ReaderDash');
+})->name('ReaderDash');
+
+
+Route::get('/AddArticle',function(){
+    return view('reader.AddArticle');
+})->name('addArticle');
+
+// crud
+
+Route::get('/Articles',[ReaderController::class,'index'])->name('articles');
 
 
 
 
 
-
-
-
-
-
-
-// Route::get('/mix', [LibrraryController::class,'mix']);
-
-// Route::get('/find/{id}', [LibrraryController::class,'getAllLibrariesByCity']);

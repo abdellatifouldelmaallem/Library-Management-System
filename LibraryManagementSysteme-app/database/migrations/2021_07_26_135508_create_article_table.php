@@ -15,8 +15,10 @@ class CreateArticleTable extends Migration
     {
         Schema::create('article', function (Blueprint $table) {
             $table->id();
+            $table->string('title');
             $table->text('content');
             $table->unsignedBigInteger('reader_id');
+            $table->string('image');
             $table->string('date');
 
             $table->foreign('reader_id')->references('id')->on('reader')->onDelete('cascade');

@@ -41,7 +41,7 @@
                 </div>
                 <div class="md-3 py-2">
                     <label for="cars">Choose an auther:</label>
-                    <select id="cars" name="cars">
+                    <select id="cars" name="auther">
                         <option value=""></option>  
                     @foreach ($authers as $auther )
                     <option {{ $auther->id == $books->auther_id ? 'selected' : '' }} value="{{$auther->id}}">{{ $auther->fullName}}</option>  
@@ -50,7 +50,7 @@
                 </div>
                 <div class="md-3 py-2">
                     <label for="cars">Choose an category:</label>
-                    <select id="cars" name="cars">
+                    <select id="cars" name="category">
                         <option value=""></option> 
                     @foreach ( $categories as $category)
                     <option {{ $category->id == $books->category_id ? 'selected' : '' }} value="{{$category->id}}">{{ $category->name}}</option>  

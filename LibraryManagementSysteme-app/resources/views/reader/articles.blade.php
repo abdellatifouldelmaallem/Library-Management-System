@@ -17,7 +17,9 @@
         </nav>
 
         <div class="container-fluid px-4">
-           <div class="row ">     
+           <div class="row ">
+             
+            
            </div>
 
             <div class="row my-5">
@@ -25,22 +27,21 @@
                 <div class="col">
 
                     <div class="col d-flex justify-content-end rounded shadow-sm bg-light my-3 py-2 ">
-                        <a href="{{ route('dashboard')}}" class="btn btn-success">back</a>
-                        <a href="{{ route('AddBook')}}" class="btn btn-primary mx-2 ">Add book</a>
+                        <a href="{{route('ReaderDash')}}" class="btn btn-success">back</a>
+                        <a href="{{route('addArticle')}}" class="btn btn-primary mx-2 ">Add an article</a>
                         
                     </div>
 
                     <div class="table-responsive  bg-white rounded shadow-sm ">
-             
+                
                         <table class="table text-center  ">
+
                             <tr >
                                 <th scope="col" width="50" >#</th>
-                                <th scope="col">name</th>
-                                <th scope="col" >image</th>
-                                <th scope="col">description</th>
-                                <th scope="col">Price</th>
-                                <th scope="col">auther_id</th>
-                                <th scope="col">category_id</th>
+                                <th scope="col">title</th>
+                                <th scope="col" >content</th>
+                                <th scope="col">image</th>
+                                <th scope="col">date</th>
                                 <th scope="col">action</th>
                             </tr>
                         </table>
@@ -48,22 +49,21 @@
                       
                       <div class="table-responsive-sm bg-white rounded shadow-sm text-center">
                         <table class="table">
-                            @foreach ( $books as $book )
+                        @foreach ( $articles as $article )
+                            
+                        
                             <tr>
-                                <th >{{ $book->id }}</th>
-                                <td>{{ $book->name }}</td>
-                                <td><img src="{{ asset('image/'.$book->image) }}" style="width: 99px;" alt="image"></td>
-                                <td>{{ $book->description }}</td>
-                                <td>{{ $book->price }}</td>
-                                <td>{{ $book->auther->fullName }}</td>
-                                <td>{{ $book->category->name }}</td>
+                                <th>{{ $article->id }}</th>
+                                <td>{{ $article->title }}</td>
+                                <td>{{ $article->content }} </td>
+                                <td>{{ $article->image }}</td>
+                                <td>{{ $article->date }}</td>
                                 <td>
-                                    <a href="{{ route('edit.Book',$book['id'])}}" class="btn btn-success">Edit</a>
-                                    <a href="{{ route('delete.book',$book['id'])}}" class="btn btn-danger">Delete</a>
-
+                                    <a href="" class="btn btn-success">Edit</a>
+                                    <a href="" class="btn btn-danger">Delete</a>
                                 </td>
                             </tr>
-                            @endforeach
+                            @endforeach 
                         </table>
                       </div>
                       

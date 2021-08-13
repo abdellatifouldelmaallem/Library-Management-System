@@ -88,7 +88,13 @@ class LibraryController extends Controller
         
         return redirect('/books');
     }
+    
+  
 
+    public function delete($id){
+        book::find($id)->delete();
+        return redirect('/books');
+    }
 
 
     

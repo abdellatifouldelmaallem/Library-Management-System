@@ -84,7 +84,7 @@
                     </select>
                 </div>
                 <button type="submit" class="btn btn-primary">Register</button>
-                <a href="{{route('dashboard')}}" class="btn btn-danger">Cancel</a>
+                <a href="{{route('books')}}" class="btn btn-danger">Cancel</a>
             </form>
               <div class="pt-2">
                   

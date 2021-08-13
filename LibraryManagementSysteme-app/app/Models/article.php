@@ -14,8 +14,10 @@ class article extends Model
     protected $primaryKey= 'id';
 
     protected $fillable = [
+        'title',
         'content',
         'reader_id',
+        'image',
         'date',
     ];
 

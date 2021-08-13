@@ -9,7 +9,8 @@ class ReaderController extends Controller
 {
 
     public function index(){
-       return article::all();
+       $articles=article::all();
+       return view('reader.articles', compact('articles'));
     }
 
 

@@ -45,6 +45,16 @@
                               @enderror
                             </div>
                         </div>
+                        <div class="form-row py-3">
+                            <div class="offset-1 col-lg-10">
+                                <input type="text" name="adress" class="inp px-3" placeholder="entre your adress">
+                                @error('adress')
+                                <span class="invalid-feedback" role="alert">
+                                  <strong>{{ $message }}</strong>
+                                </span>
+                              @enderror
+                            </div>
+                        </div>
 
                         <div class="form-row py-3">
                             <div class="offset-1 col-lg-10">
@@ -67,16 +77,16 @@
                               @enderror
                             </div>
                         </div>
-                        <div class="form-row py-3">
-                            <div class="form-check">
-                                <input class="form-check-input" type="radio" name="type" id="flexRadioDefault1" value="librarian">
-                                <label class="form-check-label" for="flexRadioDefault1">
+                        <div class="row  py-3 d-flex justify-content-center">
+                            <div class="form-check ">
+                                <input class="form-check-input  " type="radio" name="type" id="flexRadioDefault1" value="librarian">
+                                <label class="form-check-label mx-2 " for="flexRadioDefault1">
                                   librarian
                                 </label>
                               </div>
                               <div class="form-check">
                                 <input class="form-check-input" type="radio" name="type" id="flexRadioDefault2" value="reader" checked>
-                                <label class="form-check-label" for="flexRadioDefault2">
+                                <label class="form-check-label mx-2" for="flexRadioDefault2">
                                  reader
                                 </label>
                               </div>
