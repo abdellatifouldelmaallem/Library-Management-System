@@ -73,15 +73,17 @@ Route::get('/ReaderDash', function () {
     return view('reader.ReaderDash');
 })->name('ReaderDash');
 
-
-Route::get('/AddArticle',function(){
+Route::get('/AddArticle', function(){
     return view('reader.AddArticle');
-})->name('addArticle');
+})->name('add.article');
 
 // crud
 
 Route::get('/Articles',[ReaderController::class,'index'])->name('articles');
 
+Route::post('/articles/NewArticle',[ReaderController::class,'store'])->name('newArticle')->middleware('auth');
+
+Route::post('/Article/update/{id}', [ReaderController::class, 'update'])->name('updateArticle');
 
 
 

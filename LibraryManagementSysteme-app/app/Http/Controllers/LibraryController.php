@@ -6,6 +6,7 @@ use App\Models\auther;
 use App\Models\book;
 use App\Models\category;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Auth;
 
 class LibraryController extends Controller
 {

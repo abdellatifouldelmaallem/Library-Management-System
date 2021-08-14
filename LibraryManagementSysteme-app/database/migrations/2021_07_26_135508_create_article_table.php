@@ -21,7 +21,7 @@ class CreateArticleTable extends Migration
             $table->string('image');
             $table->string('date');
 
-            $table->foreign('reader_id')->references('id')->on('reader')->onDelete('cascade');
+            $table->foreign('reader_id')->references('id')->on('users');
             $table->timestamps();
         });
     }

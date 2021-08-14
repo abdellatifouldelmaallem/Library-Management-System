@@ -20,26 +20,9 @@
         <div class="row">
             <div class="col-lg-6 shadow rounded p-3">
 
-                <form action="{{route('')}}" method="POST" enctype="multipart/form-data">
+                <form action="{{route('newArticle')}}" method="POST" enctype="multipart/form-data">
                 @csrf
-                {{-- <div class="row">
-                    <div class="col md-3 ">
-                        <label class="form-label">title of an article:</label>
-                        <input type="text" name="title" class="form-control py-4" placeholder="write the title">
-                        @error('title')
-                        <span>{{$message}}</span>
-                            
-                        @enderror
-                    </div>
-                    <div class="col md-3">
-                        <label class="form-label">content :</label>
-                        <input type="text" name="content" class="form-control py-4" placeholder="you're free ">
-                        @error('content')
-                        <span>{{$message}}</span>
-                            
-                        @enderror
-                    </div>
-                </div> --}}
+               
                 <div class="md-3 py-2">
                     <label class="form-label">Title:</label>
                     <input type="text" name="title" class="form-control py-4" placeholder="write the title">
@@ -57,6 +40,7 @@
                        
                    @enderror
                 </div>
+
                 
                 <div class="md-3 py-2">
                     <label class="form-label"> imge :</label>

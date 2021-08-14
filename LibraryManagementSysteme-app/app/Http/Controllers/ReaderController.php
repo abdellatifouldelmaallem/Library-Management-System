@@ -3,48 +3,71 @@
 namespace App\Http\Controllers;
 
 use App\Models\article;
+use App\Models\reader;
+use App\Models\User;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Auth;
 
 class ReaderController extends Controller
 {
 
     public function index(){
-       $articles=article::all();
+       $articles=article::where('reader_id',Auth::user()->id)->get();
        return view('reader.articles', compact('articles'));
     }
 
+    // public function findReader($id){
+    //     $articleId=article::find($id);
+    //     $reader = user::all()->where('id',$articleId->id)->get();
+    //     return view('reader.AddArticle',compact('reader'));
+    // }
+
 
     public function store(Request $request){
-        $article = article::create([
-            'content'=>$request->content,
-            'reader_id'=>$request->reader_id,
-            'date'=>$request->date,
+         
+        $request->validate([
+            'title'=>'required',
+            'content'=>'required',
+            'image'=>'required|mimes:jpg,png,jpeg|max:5048',
+            'date'=>'required',
         ]);
 
-        return $article;
+        $newImage=time() . "-" . $request->name .'.' . 
+        $request->image->extension();
+
+        $request->image->move(public_path('image'),$newImage);
+
+        $article = article::create([
+            'title'=>$request->input('title'),
+            'content'=>$request->input('content'),
+            'reader_id'=>Auth::user()->id,
+            'image'=>$newImage,
+            'date'=>$request->input('date'),
+        ]);
+
+        return redirect('/Articles');
     }
 
-
-    public function showById($id){
-        $article=article::find($id);
-        return $article;
-    }
 
     public function update(Request $request, $id){
         $article = article::find($id);
+        
+        if($request->has('image')){
+            $newImage=time() . "-" . $request->title .'.' . $request->image->extension();
+           $request->image->move(public_path('image'),$newImage);
+        }
+
         $article->update([
-            'content'=>$request->content,
-            'reader_id'=>$request->reader_id,
-            'date'=>$request->date,
+            'title'=>$request->input('title'),
+            'content'=>$request->input('content'),
+            'reader_id'=>Auth::user()->id,
+            'image'=>$newImage??$article->image,
+            'date'=>$request->input('date'),
         ]);
         
-        return $article;
+        return redirect('/Articles');
     }
 
 
-    public function destroy($id)
-    {
-        return article::destroy($id);
-    }
 
 }

@@ -28,7 +28,7 @@
 
                     <div class="col d-flex justify-content-end rounded shadow-sm bg-light my-3 py-2 ">
                         <a href="{{route('ReaderDash')}}" class="btn btn-success">back</a>
-                        <a href="{{route('addArticle')}}" class="btn btn-primary mx-2 ">Add an article</a>
+                        <a href="{{route('add.article')}}" class="btn btn-primary mx-2 ">Add an article</a>
                         
                     </div>
 
@@ -59,7 +59,7 @@
                                 <td>{{ $article->image }}</td>
                                 <td>{{ $article->date }}</td>
                                 <td>
-                                    <a href="" class="btn btn-success">Edit</a>
+                                    <a href="{{route('updateArticle')}}" class="btn btn-success">Edit</a>
                                     <a href="" class="btn btn-danger">Delete</a>
                                 </td>
                             </tr>
