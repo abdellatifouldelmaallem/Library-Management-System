@@ -115,8 +115,8 @@
                             <thead>
                                 <tr>
                                     <th scope="col" width="50">#</th>
-                                    <th scope="col">Product</th>
-                                    <th scope="col">Customer</th>
+                                    <th scope="col">books</th>
+                                    <th scope="col">clients</th>
                                     <th scope="col">Price</th>
                                 </tr>
                             </thead>

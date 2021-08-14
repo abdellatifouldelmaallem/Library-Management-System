@@ -1,6 +1,6 @@
 <?php
 
-
+use App\Http\Controllers\AdminController;
 use App\Models\admin;
 use App\Models\city;
 use App\Models\library;
@@ -25,7 +25,7 @@ use Illuminate\Support\Facades\Route;
 Route::get('/', function () {
    
     return view('welcome');
-});
+})->name('home');
 
 Route::get('/contact', function () {  
     return view('contact');
@@ -43,11 +43,8 @@ Route::get('/LibraryDash', function () {
         return view('library.LibraryDash');
     })->name('LibraryDash');
     
-    Route::get('/adminDash', function () {
-    return view('adminDash');
-})->name('adminDash');
-
-////////////////////////////////////////////////special for library and books///////////////////////////////////////////
+    
+    ////////////////////////////////////////////////special for library and books///////////////////////////////////////////
 Route::get('/dashbord', function () {   
     return view('library.LibraryDash');
 })->name("dashboard");
@@ -89,4 +86,21 @@ Route::post('/Article/update/{id}', [ReaderController::class, 'update'])->name('
 
 Route::get('/article/delete/{id}', [ReaderController::class ,'delete'])->name('delete.article');
 
+/////////////////////////////////////special for admin///////////////////////////////////////////////
 
+Route::get('/adminDash', function () {
+return view('admin.adminDash');
+})->name('adminDash');
+
+// Route::get('/admin/readers', function(){
+//     return view('admin.allReaders');
+// })->name('readers');
+
+// crud for reader 
+Route::get('/admin/allReaders',[AdminController::class,'AllReaders'])->name('allReaders');
+
+Route::get('/admin/deleteReader/{id}',[AdminController::class,'deleteReaders'])->name('DeleteReaders');
+
+Route::get('/admin/allLibraries',[AdminController::class,'AllLibraries'])->name('AllLibraries');
+
+Route::get('/admin/deleteLibrary/{id}',[AdminController::class,'deleteLibrary'])->name('deleteLibrary');

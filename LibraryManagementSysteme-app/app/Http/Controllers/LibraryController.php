@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use App\Models\auther;
+use App\Models\being;
 use App\Models\book;
 use App\Models\category;
 use Illuminate\Http\Request;
@@ -49,17 +50,21 @@ class LibraryController extends Controller
 
         $request->image->move(public_path('image'),$newImage);
 
-        $books = book::create([
+        $book = book::create([
             'name'=>$request->input('name'),
             'price'=>$request->input('price'),
             'image'=>$newImage,
             'description'=>$request->input('description'),
+            'user_id'=>Auth::id(),
             'auther_id'=>$request->input('auther'),
             'category_id'=>$request->input('category'),
         ]);
-
+       
+      
         return redirect('/books');
     }
+
+    
 
     public function showById($id){
         $books=book::find($id);

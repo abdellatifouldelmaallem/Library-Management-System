@@ -35,4 +35,8 @@ class library extends Model
         return $this->belongsToMany(book::class);
     }
 
+    public function admin(){
+        return $this->hasMany(User::class);
+    }
+
 }

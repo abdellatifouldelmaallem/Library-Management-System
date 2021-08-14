@@ -13,7 +13,7 @@
     <!-- owl carousel them.css-->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.theme.default.min.css" integrity="sha512-sMXtMNL1zRzolHYKEujM2AqCLUR9F2C4/05cdbxjjLSRvMQIciEPCQZo++nk7go3BtSuK9kfa/s+a4f4i5pLkw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
     <link rel="stylesheet" href="{{ asset('css/style.css') }}">
-
+    <link rel="icon" type="image/png" href="{{asset('favicon.ico')}}" />
     <title>Document</title>
 
 </head>
@@ -23,7 +23,7 @@
       <!-- navbar and header start here-->
         <header class="mb-auto ">
           <div class="d-flex justify-content-between ">
-            <h3 class="float-md-start mt-0 my-2 ">Logo</h3>
+            <img src="{{asset('image/logo.png')}}" class="ml-3" style="height: 60px;" alt="logo">
             <nav class="nav nav-masthead justify-content-end float-md-end my-2 px-3">
               <a class="nav-link active test " aria-current="page" href="#">Home</a>
               <a class="nav-link test" href="{{ route('about')}}">About us</a>
@@ -249,8 +249,9 @@
             <div class="row text-center text-md-left">
 
               <div class=" col-md-3 col-lg-3 col-xl-3 mx-auto mt-3">
-                <h5 class="text-uppercase mb-4 font-weight-bold text-warning"> abdellatif</h5>
-                <p> Lorem ipsum dolor sit amet consectetur adipisicing elit. Eveniet libero odit nostrum fugit, quaerat voluptatum maxime velit culpa? Vero aperiam harum autem est rem sunt eveniet eos qui perspiciatis minima.</p>
+                {{-- <h5 class="text-uppercase mb-4 font-weight-bold text-warning"> abdellatif</h5> --}}
+                <img src="{{asset('image/logo2Footer.png')}}" class="ml-3" style="height: 80px;" alt="logo">
+                <p>  quaerat voluptatum maxime velit culpa? Vero aperiam harum autem est rem sunt eveniet eos qui perspiciatis minima.</p>
                 </div>
 
               <div class=" col-md-3 col-lg-3 col-xl-3 mx-auto mt-3">

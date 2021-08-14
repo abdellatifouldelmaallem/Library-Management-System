@@ -12,11 +12,11 @@
                         class="fas fa-tachometer-alt me-2"></i>  Dashboard</a> --}}
                 <a href="#" class="list-group-item list-group-item-action bg-transparent second-text fw-bold"><i
                     class="fas fa-eye me-2"></i>   View All Articles </a>
-                <a href="{{ route('books')}}" class="list-group-item list-group-item-action bg-transparent second-text fw-bold"><i
+                <a href="" class="list-group-item list-group-item-action bg-transparent second-text fw-bold"><i
                         class="fas fa-eye me-2"></i>  View All Books</a>
-                <a href="#" class="list-group-item list-group-item-action bg-transparent second-text fw-bold"><i
+                <a href="{{route('allReaders')}}" class="list-group-item list-group-item-action bg-transparent second-text fw-bold"><i
                      class="fas fa-book-reader"></i>  Readers</a>
-                <a href="#" class="list-group-item list-group-item-action bg-transparent second-text fw-bold"><i 
+                <a href="{{route('AllLibraries')}}" class="list-group-item list-group-item-action bg-transparent second-text fw-bold"><i 
                     class="fas fa-home"></i>  Libraries</a>
                     <a  class="list-group-item list-group-item-action bg-transparent text-danger fw-bold" href="#.">
                         <form method="post" action="{{route('logout')}}"  onclick="event.preventDefault();

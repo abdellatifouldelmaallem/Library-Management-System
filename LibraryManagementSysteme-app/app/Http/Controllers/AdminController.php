@@ -4,39 +4,41 @@ namespace App\Http\Controllers;
 
 use App\Models\library;
 use App\Models\reader;
+use App\Models\User;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Auth;
 
 class AdminController extends Controller
 {
-    // // crud for reader
-    // public function indexForReader(){
-    //     return reader::all();
-    // }
+ // for the readers
+    public function AllReaders(){
+        $readers=User::where('type', 'reader')->get();
+        return view('admin.allReaders',compact('readers'));
+    }
 
-    // public function showByIdReader($id){
-    //     $reader=reader::find($id);
-    //     return $reader;
-    // }
+    public function deleteReaders($id){
+       $user= User::findOrFail($id);
+       if($user->type!='reader'){
+           return abort('404');
+       }
+       $user->delete();
+       return redirect('/admin/allReaders');
+    }
 
-    // public function destroyforReader($id)
-    // {
-    //     return reader::destroy($id);
-    // }
 
+// for libraries
+public function AllLibraries(){
+    $librarian=User::where('type', 'librarian')->get();
+    return view('admin.allLibraries',compact('librarian'));
+}
 
-    // // crud for librarian
-    // public function indexforlibrary(){
-    //     return library::all();
-    // }
-
-    // public function showByIdLibrary($id){
-    //     $library=library::find($id);
-    //     return $library;
-    // }
-
-    // public function destroyforlibrary($id)
-    // {
-    //     return library::destroy($id);
-    // }
+public function deleteLibrary($id){
+    $user= User::findOrFail($id);
+    if($user->type!='librarian'){
+        return abort('404');
+    }
+    $user->delete();
+    return redirect('/admin/allLibraries');
+ }
 
 }

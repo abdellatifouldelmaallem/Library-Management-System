@@ -20,5 +20,5 @@ class admin extends Model
         'password',
     ];
 
-    
+  
 }

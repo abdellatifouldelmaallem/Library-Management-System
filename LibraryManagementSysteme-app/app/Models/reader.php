@@ -28,4 +28,8 @@ class reader extends Model
         return $this->belongsToMany(book::class);
     }
 
+    public function admin(){
+        return $this->hasMany(admin::class);
+    }
+
 }

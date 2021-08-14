@@ -20,10 +20,12 @@ class CreateBookTable extends Migration
             $table->string('image', 45);
             $table->string('description', 45);
             $table->float('price', 45);
+            $table->unsignedBigInteger('user_id');
             $table->unsignedBigInteger('auther_id');
             $table->unsignedBigInteger('category_id');
             
 
+            $table->foreign('user_id')->references('id')->on('users')->onDelete('cascade');
             $table->foreign('auther_id')->references('id')->on('auther')->onDelete('cascade');
             $table->foreign('category_id')->references('id')->on('category')->onDelete('cascade');
             $table->timestamps();

@@ -36,7 +36,7 @@
 
                 <div class="md-3 py-2">
                     <label class="form-label">content:</label>
-                   <textarea name="content" class="form-control" value="{{$articles['content']}}"  placeholder="you're free" rows="2"></textarea>
+                   <textarea name="content" class="form-control" value=""  placeholder="you're free" rows="2">{{$articles['content']}}</textarea>
                    @error('content')
                    <span>{{$message}}</span>
                        

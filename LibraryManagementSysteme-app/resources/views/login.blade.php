@@ -12,7 +12,15 @@
 
             <div class="col-lg-7 text-center py-5">
                 <h1 class="animate__animated animate__heartBeat animate__infinite">welcome back</h1>
-
+                @if ($errors->any())
+                <div class="alert alert-danger">
+                    <ul>
+                        @foreach ($errors->all() as $error)
+                            <li>{{ $error }}</li>
+                        @endforeach
+                    </ul>
+                </div>
+            @endif
                 <form class="d-flex flex-column" method="POST" action="{{route('login')}}">
                     @csrf
                     <div class="form-row py-3 pt-5">

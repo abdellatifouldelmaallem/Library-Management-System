@@ -83,6 +83,21 @@
                         @enderror
                     </select>
                 </div>
+
+                <div class="md-3 py-2">
+                    <label for="cars">name of your library:</label>
+                    <select id="cars" name="library">
+                        <option value=""></option> 
+                    @foreach (  as)
+                        <option value="" ></option> 
+                        @endforeach
+                        @error('library')
+                        <span>{{$message}}</span>
+                            
+                        @enderror
+                    </select>
+                        
+                </div>
                 <button type="submit" class="btn btn-primary">Register</button>
                 <a href="{{route('books')}}" class="btn btn-danger">Cancel</a>
             </form>
