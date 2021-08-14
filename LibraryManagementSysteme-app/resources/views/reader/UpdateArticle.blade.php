@@ -20,12 +20,14 @@
         <div class="row">
             <div class="col-lg-6 shadow rounded p-3">
 
-                <form action="{{route('')}}" method="POST" enctype="multipart/form-data">
+                <form action="{{route('updateArticle',$articles['id'])}}" method="POST" enctype="multipart/form-data">
                 @csrf
+
+                <input type="hidden" name="id" value="{{$articles['id']}}">
       
                 <div class="md-3 py-2">
                     <label class="form-label">Title:</label>
-                    <input type="text" name="title" class="form-control py-4" placeholder="write the title">
+                    <input type="text" name="title" class="form-control py-4" value="{{$articles['title']}}" placeholder="write the title">
                     @error('title')
                     <span>{{$message}}</span>
                         
@@ -34,7 +36,7 @@
 
                 <div class="md-3 py-2">
                     <label class="form-label">content:</label>
-                   <textarea name="content" class="form-control" placeholder="you're free" rows="2"></textarea>
+                   <textarea name="content" class="form-control" value="{{$articles['content']}}"  placeholder="you're free" rows="2"></textarea>
                    @error('content')
                    <span>{{$message}}</span>
                        
@@ -43,7 +45,7 @@
                 
                 <div class="md-3 py-2">
                     <label class="form-label"> imge :</label>
-                    <input type="file" name="image" class="form-control py-4">
+                    <input type="file" name="image" value="{{$articles['image']}}" class="form-control py-4">
                     @error('image')
                     <span>{{$message}}</span>
                         
@@ -52,7 +54,7 @@
 
                 <div class="md-3 py-2">
                     <label class="form-label"> date :</label>
-                    <input type="text" name="date" class="form-control py-4">
+                    <input type="text" name="date" value="{{$articles['date']}}" class="form-control py-4">
                     @error('date')
                     <span>{{$message}}</span>
                         
@@ -61,7 +63,7 @@
               
                 
                 <button type="submit" class="btn btn-primary">Register</button>
-                <a href="{{route('')}}" class="btn btn-danger">Cancel</a>
+                <a href="{{route('articles')}}" class="btn btn-danger">Cancel</a>
             </form>
               <div class="pt-2">
                   

@@ -48,6 +48,11 @@ class ReaderController extends Controller
         return redirect('/Articles');
     }
 
+    public function showById($id){
+        $articles = article::find($id);
+        return view('reader.UpdateArticle', ['articles'=>$articles]);
+    }
+
 
     public function update(Request $request, $id){
         $article = article::find($id);
@@ -65,6 +70,11 @@ class ReaderController extends Controller
             'date'=>$request->input('date'),
         ]);
         
+        return redirect('/Articles');
+    }
+
+    public function delete($id){
+        article::find($id)->delete();
         return redirect('/Articles');
     }
 

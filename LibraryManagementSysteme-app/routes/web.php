@@ -83,8 +83,10 @@ Route::get('/Articles',[ReaderController::class,'index'])->name('articles');
 
 Route::post('/articles/NewArticle',[ReaderController::class,'store'])->name('newArticle')->middleware('auth');
 
+Route::get('/article/edit/{id}', [ReaderController::class,'showById'])->name('edit.article');
+
 Route::post('/Article/update/{id}', [ReaderController::class, 'update'])->name('updateArticle');
 
-
+Route::get('/article/delete/{id}', [ReaderController::class ,'delete'])->name('delete.article');
 
 
