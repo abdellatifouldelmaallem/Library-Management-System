@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use App\Models\article;
 use App\Models\library;
 use App\Models\reader;
 use App\Models\User;
@@ -40,5 +41,14 @@ public function deleteLibrary($id){
     $user->delete();
     return redirect('/admin/allLibraries');
  }
+ 
+
+ public function AllArticles(){
+     $articles = article::with('user')->get();
+     
+     return view('admin.allArticles',compact('articles'));
+ }
+
 
 }
+
