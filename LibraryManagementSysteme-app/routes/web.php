@@ -92,6 +92,16 @@ Route::get('/adminDash', function () {
 return view('admin.adminDash');
 })->name('adminDash');
 
+Route::get('/allArticles', function () {
+return view('admin.allArticles');
+})->name('articles');
+
+Route::get('/allBooks', function () {
+return view('admin.allBooks');
+})->name('books');
+
+Route::get('/dashboard/articles',[AdminController::class , 'AllArticles'])->name('allArticles');
+
 // Route::get('/admin/readers', function(){
 //     return view('admin.allReaders');
 // })->name('readers');

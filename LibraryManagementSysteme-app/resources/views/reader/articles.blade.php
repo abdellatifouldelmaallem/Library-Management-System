@@ -11,7 +11,7 @@
     <div id="page-content-wrapper">
         <nav class="navbar navbar-expand-lg navbar-light bg-transparent py-4 px-4">
             <div class="d-flex align-items-center">
-                <h2 class="fs-2 m-0">Dashboard</h2>
+                <h2 class="fs-2 m-0">All Articles</h2>
             </div>
 
         </nav>

@@ -21,7 +21,7 @@
 <body>
     <div class="">
       <!-- navbar and header start here-->
-        <header class="mb-auto ">
+        <header class="mb-auto sticky-top ">
           <div class="d-flex justify-content-between ">
             <img src="{{asset('image/logo.png')}}" class="ml-3" style="height: 60px;" alt="logo">
             <nav class="nav nav-masthead justify-content-end float-md-end my-2 px-3">
