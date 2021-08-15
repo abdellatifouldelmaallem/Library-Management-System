@@ -43,6 +43,8 @@ class User extends Authenticatable
         'email_verified_at' => 'datetime',
     ];
 
-   
+    public function article(){
+        return $this->hasMany(article::class,'reader_id');
+    }
 
 }

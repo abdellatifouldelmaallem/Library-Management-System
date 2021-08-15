@@ -22,7 +22,7 @@ class article extends Model
     ];
 
     // reader has many articles
-   public function reader(){
-       return $this->hasMany(reader::class);
+   public function user(){
+       return $this->belongsTo(User::class,'reader_id');
    }
 }
