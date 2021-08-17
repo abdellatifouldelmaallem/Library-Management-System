@@ -53,11 +53,11 @@
                                <th>{{ $article->id }}</th>
                                <td>{{ $article->title }}</td>
                                <td>{{ $article->content }}</td>
-                               <td>{{ $article->image }}</td>
+                               <td><img src="{{ asset('image/'.$article->image) }}" style="width: 99px;" alt="image"></td>
                                <td>{{ $article->date }}</td>
                                <td>{{ $article->user->name }}</td>
                                <td>
-                                   <a href="" class="btn btn-danger">Delete</a>
+                                   <a href="{{route('deleteArt',$article->id)}}" class="btn btn-danger">Delete</a>
                                 </td>
                             </tr>
                             @endforeach

@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use App\Models\article;
+use App\Models\book;
 use App\Models\library;
 use App\Models\reader;
 use App\Models\User;
@@ -33,7 +34,7 @@ public function AllLibraries(){
     return view('admin.allLibraries',compact('librarian'));
 }
 
-public function deleteLibrary($id){
+   public function deleteLibrary($id){
     $user= User::findOrFail($id);
     if($user->type!='librarian'){
         return abort('404');
@@ -42,12 +43,25 @@ public function deleteLibrary($id){
     return redirect('/admin/allLibraries');
  }
  
-
+// for articles
  public function AllArticles(){
      $articles = article::with('user')->get();
      
      return view('admin.allArticles',compact('articles'));
  }
+
+ public function deleteArt($id){
+     article::find($id)->delete();
+     return redirect('/dashboard/articles');
+ }
+
+ // for books
+ public function AllBooks(){
+     $books = book::with('library')->get();
+      return view('admin.allBooks',compact('books'));
+ }
+
+
 
 
 }

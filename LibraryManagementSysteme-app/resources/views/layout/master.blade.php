@@ -14,7 +14,7 @@
 <body>
 
     <header class="mb-auto ">
-        <div class="d-flex justify-content-between ">
+        <div class="d-flex justify-content-between newNav">
           <img src="{{asset('image/logo.png')}}" class="ml-3" style="height: 50px;" alt="logo">
           <nav class="nav nav-masthead justify-content-end float-md-end my-2 px-3">
             <a class="nav-link active test " aria-current="page" href="{{route('home')}}">Home</a>

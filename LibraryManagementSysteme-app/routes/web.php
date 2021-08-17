@@ -9,6 +9,7 @@ use Carbon\Factory;
 use App\Http\Controllers\AuthController;
 use App\Http\Controllers\LibraryController;
 use App\Http\Controllers\ReaderController;
+use App\Http\Controllers\SearchController;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -36,6 +37,8 @@ Route::get('/about', function () {
 })->name("about");
 Route::get('/home', [AuthController::class ,'isLogin']);
 
+Route::get('/search',[SearchController::class,'search'])->name('search');
+
 
 
 
@@ -48,6 +51,11 @@ Route::get('/LibraryDash', function () {
 Route::get('/dashbord', function () {   
     return view('library.LibraryDash');
 })->name("dashboard");
+
+// Route::get('/dashbord/books', function () {   
+//     return view('library.books');
+// })->name("allbooks");
+
 
 Route::get('/books/AddBook', [LibraryController::class , 'createForAdd'])->name("AddBook");
 
@@ -94,23 +102,26 @@ return view('admin.adminDash');
 
 Route::get('/allArticles', function () {
 return view('admin.allArticles');
-})->name('articles');
+})->name('allarticles');
 
-Route::get('/allBooks', function () {
-return view('admin.allBooks');
-})->name('books');
+// Route::get('/allBooks', function () {
+// return view('admin.allBooks');
+// })->name('allbooks');
 
-Route::get('/dashboard/articles',[AdminController::class , 'AllArticles'])->name('allArticles');
 
-// Route::get('/admin/readers', function(){
-//     return view('admin.allReaders');
-// })->name('readers');
+
 
 // crud for reader 
 Route::get('/admin/allReaders',[AdminController::class,'AllReaders'])->name('allReaders');
-
 Route::get('/admin/deleteReader/{id}',[AdminController::class,'deleteReaders'])->name('DeleteReaders');
 
+// crud for library 
 Route::get('/admin/allLibraries',[AdminController::class,'AllLibraries'])->name('AllLibraries');
-
 Route::get('/admin/deleteLibrary/{id}',[AdminController::class,'deleteLibrary'])->name('deleteLibrary');
+
+// crud for articles 
+Route::get('/dashboard/articles',[AdminController::class , 'AllArticles'])->name('all.Articles');
+Route::get('/delete/{id}',[AdminController::class , 'deleteArt'])->name('deleteArt');
+
+//crud for books
+Route::get('/dashboard/books',[AdminController::class , 'AllBooks'])->name('all.Books');

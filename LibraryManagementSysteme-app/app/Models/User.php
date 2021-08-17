@@ -47,4 +47,8 @@ class User extends Authenticatable
         return $this->hasMany(article::class,'reader_id');
     }
 
+    public function book_library(){
+        return $this->hasMany(book::class,'user_id');
+    }
+
 }

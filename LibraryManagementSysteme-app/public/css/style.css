@@ -184,6 +184,8 @@
   height: 76vh;
 }
 
+
+
 /* page about us*/
 
 .sectio{
@@ -196,6 +198,7 @@
   display: block;
   margin: auto;
   padding-top: 100px;
+  color: white;
 }
 .content-section{
   float: left;
@@ -216,7 +219,7 @@
 .content-section .content h3{
 margin-top: 20px;
 font-size: 24px;
-color: blue;
+color: rgb(0, 0, 0);
 }
 .content-section .content p{
   margin-top: 15px;
@@ -312,6 +315,9 @@ margin-top: 35px;
   background: #41BD8B;
 color: #ffffff;
 border-radius: 5px;
+}
+.newNav{
+  background: rgb(230, 230, 230);
 }
 
 /* agenda*/

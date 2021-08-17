@@ -71,7 +71,7 @@
            <!-- part of image-->
             <div class="col-lg-6 ">
                 <div class="ml-1 ">
-                    <img src="{{asset('image/addBook.jpg')}}" alt="image" style=" object-fit: cover;" class="hight img-fulid w-100">
+                    <img src="{{asset('image/write.jpg')}}" alt="image" style=" object-fit: cover;" class="hight img-fulid w-100">
                 </div>
             </div> 
 

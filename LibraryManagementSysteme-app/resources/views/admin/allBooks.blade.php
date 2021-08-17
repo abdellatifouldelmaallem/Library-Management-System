@@ -48,19 +48,19 @@
                       
                       <div class="table-responsive-sm bg-white rounded shadow-sm text-center">
                         <table class="table">
-                           
+                           @foreach ( $books as $book )
                             <tr>
-                                <th>1</th>
-                                <td>spport</td>
-                                <td>bhgd vrez cczerfs rzg agarfev </td>
-                                <td>22.22</td>
-                                <td>pgj</td>
-                                <td>el firdawse</td>
+                                <th>{{ $book->id}}</th>
+                                <td>{{ $book->name}}</td>
+                                <td>{{ $book->description}}</td>
+                                <td>{{ $book->price}}</td>
+                                <td>{{ $book->image}}</td>
+                                <td>{{ $book->user->name}}</td>
                                 <td>
                                     <a href="" class="btn btn-danger">Delete</a>
                                 </td>
                             </tr>
-                           
+                            @endforeach
                         </table>
                       </div>
                       

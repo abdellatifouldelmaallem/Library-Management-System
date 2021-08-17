@@ -14,7 +14,7 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.theme.default.min.css" integrity="sha512-sMXtMNL1zRzolHYKEujM2AqCLUR9F2C4/05cdbxjjLSRvMQIciEPCQZo++nk7go3BtSuK9kfa/s+a4f4i5pLkw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
     <link rel="stylesheet" href="{{ asset('css/style.css') }}">
     <link rel="icon" type="image/png" href="{{asset('favicon.ico')}}" />
-    <title>Document</title>
+    <title>Library Mangement system</title>
 
 </head>
 
@@ -30,8 +30,8 @@
               <a class="nav-link test" href="{{ route('contact')}}">Contact us</a>
               <a class="nav-link test" href="{{ route('login')}}">Account</a>
               <a class="nav-link test" href="{{ route('register')}}">Sign up</a>
-              <form>
-                <input class="form-control " type="text" placeholder="Search" aria-label="Search">
+              <form action="{{route('search')}}" method="GET">
+                <input class="form-control " name="query" type="text" placeholder="Search" aria-label="Search">
               </form>
             </nav>
           </div>

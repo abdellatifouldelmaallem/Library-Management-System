@@ -7,8 +7,8 @@
    <section class="contact">
 
     <div class="container-fluid ">
-        <div class="row py-3">
-            <div class="col-md-6 col-lg-12">
+        <div class="row py-3 contact">
+            <div class="col-md-6  col-lg-12">
                 <h2 class="text-center mb-5 shadow-sm p-3">Contact Us</h2>
             </div>
         </div>
