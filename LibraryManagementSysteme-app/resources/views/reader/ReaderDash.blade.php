@@ -12,6 +12,8 @@
                         class="fas fa-tachometer-alt me-2"></i>  Dashboard</a> --}}
                 <a href="{{route('articles')}}" class="list-group-item list-group-item-action bg-transparent second-text fw-bold"><i
                     class="fas fa-eye me-2"></i>  View All the articles </a>
+                <a href="" class="list-group-item list-group-item-action bg-transparent second-text fw-bold"><i
+                     class="fas fa-shopping-cart"></i>  checkout</a>
      
                
 <a  class="list-group-item list-group-item-action bg-transparent text-danger fw-bold" href="#.">

@@ -37,6 +37,8 @@ Route::get('/about', function () {
 })->name("about");
 Route::get('/home', [AuthController::class ,'isLogin']);
 
+
+
 Route::get('/search',[SearchController::class,'search'])->name('search');
 
 

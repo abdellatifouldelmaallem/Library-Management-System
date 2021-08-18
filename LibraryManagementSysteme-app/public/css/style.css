@@ -316,6 +316,11 @@ margin-top: 35px;
 color: #ffffff;
 border-radius: 5px;
 }
+/* .navstiki{
+  position: -webkit-sticky;
+  position: sticky;
+  top: 0;
+} */
 .newNav{
   background: rgb(230, 230, 230);
 }
