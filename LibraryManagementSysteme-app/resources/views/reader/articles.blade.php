@@ -55,7 +55,7 @@
                             <tr>
                                 <th>{{ $article->id }}</th>
                                 <td>{{ $article->title }}</td>
-                                <td>{{ $article->content }} </td>
+                                <td class="w-25">{{ $article->content }} </td>
                                 <td><img src="{{ asset('image/'.$article->image) }}" style="width: 99px;" alt="image"></td>
                                 <td>{{ $article->date }}</td>
                                 <td>

@@ -48,19 +48,19 @@
                       
                       <div class="table-responsive-sm bg-white rounded shadow-sm text-center">
                         <table class="table">
-                           @foreach ( $books as $book )
+                        
                             <tr>
-                                <th>{{ $book->id}}</th>
-                                <td>{{ $book->name}}</td>
-                                <td>{{ $book->description}}</td>
-                                <td>{{ $book->price}}</td>
-                                <td>{{ $book->image}}</td>
-                                <td>{{ $book->user->name}}</td>
+                                <th></th>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
                                 <td>
-                                    <a href="" class="btn btn-danger">Delete</a>
+                                    <a href="" class=""></a>
                                 </td>
                             </tr>
-                            @endforeach
+                           
                         </table>
                       </div>
                       

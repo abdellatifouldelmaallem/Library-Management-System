@@ -46,10 +46,11 @@
     <table class="table">
         <thead>
           <tr>
-            <th scope="col">#</th>
+            {{-- <th scope="col">#</th> --}}
             <th scope="col">name</th>
             <th scope="col">image</th>
             <th scope="col">library</th>
+            <th scope="col">adress</th>
             <th scope="col">price</th>
             <th scope="col">action</th>
           </tr>
@@ -59,10 +60,11 @@
             @foreach ($search_book as $search_books )
       
           <tr>
-            <th scope="row">{{$search_books->id}}</th>
+            {{-- <th scope="row">{{$search_books->id}}</th> --}}
             <td>{{$search_books->name}}</td>
             <td><img src="{{ asset('image/'.$search_books->image) }}" style="width: 99px;" alt="image"></td>
             <td>{{$search_books->users->name}}</td>
+            <td>{{$search_books->users->adress}}</td>
             <td>{{$search_books->price}}</td>
             <td>
               <a href="" class="btn btn-primary">Buy Now</a>

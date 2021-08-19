@@ -53,7 +53,7 @@
                                 <th >{{ $book->id }}</th>
                                 <td>{{ $book->name }}</td>
                                 <td><img src="{{ asset('image/'.$book->image) }}" style="width: 99px;" alt="image"></td>
-                                <td>{{ $book->description }}</td>
+                                <td class="w-25">{{ $book->description }}</td>
                                 <td>{{ $book->price }}</td>
                                 <td>{{ $book->auther->fullName }}</td>
                                 <td>{{ $book->category->name }}</td>

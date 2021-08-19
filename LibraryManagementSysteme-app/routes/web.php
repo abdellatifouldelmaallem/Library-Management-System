@@ -126,4 +126,7 @@ Route::get('/dashboard/articles',[AdminController::class , 'AllArticles'])->name
 Route::get('/delete/{id}',[AdminController::class , 'deleteArt'])->name('deleteArt');
 
 //crud for books
-Route::get('/dashboard/books',[AdminController::class , 'AllBooks'])->name('all.Books');
+// Route::get('/dashboard/books',[AdminController::class , 'AllBooks'])->name('all.Books');
+Route::get('admin/books',function(){
+    return view('admin.allBooks');
+})->name('all.Books');

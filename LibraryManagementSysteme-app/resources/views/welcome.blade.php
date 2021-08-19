@@ -197,43 +197,43 @@
             <h1 class="text-center titileOfReader mb-4">What Are Reader Said ?</h1>
             <div class="card_post  shadow">
               <div class="card_img">
-                <img src="{{asset('image/about.jpg')}}" class="w-100" alt="">
+                <img src="{{asset('image/attitude.jpg')}}" class="w-100" alt="">
               </div>
               <div class="card_info">
                 <div class="card_date">
                   <span> sunday  October   23   2021</span>
-                  <span class="nameReader">Name of Reader</span>
+                  <span class="nameReader">HAMZA RADANI</span>
                 </div>
-                <h1 class="card_title">why should we read ?</h1>
-                <p class="card_text"> Lorem ipsum dolor sit amet consectetur adipisicing elit. Adipisci tempore mollitia vel dolor obcaecati reprehenderit ex deleniti cum facilis exercitationem illum consequatur harum quia quidem, doloribus omnis ipsum ut fuga!</p>
+                <h1 class="card_title">"Attitude"</h1>
+                <p class="card_text"> I am of course overjoyed to be here today in the role of ceremonial object. There is more than the usual amount of satisfaction in receiving an honorary degree from the university that helped to form one’s erstwhile callow and ignorant mind into the thing of dubious splendor that it is today</p>
               </div>
             </div>
 
             <div class="card_post  shadow my-4">
               <div class="card_img">
-                <img src="{{asset('image/about.jpg')}}" class="w-100" alt="">
+                <img src="{{asset('image/go out.jpg')}}" class="w-100" alt="">
               </div>
               <div class="card_info">
                 <div class="card_date">
-                  <span> sunday  October   23   2021</span>
-                  <span class="nameReader">Name of Reader</span>
+                  <span> sunday  October   09   2021</span>
+                  <span class="nameReader">MERYEM ZITI</span>
                 </div>
-                <h1 class="card_title">why should we read ?</h1>
-                <p class="card_text"> Lorem ipsum dolor sit amet consectetur adipisicing elit. Adipisci tempore mollitia vel dolor obcaecati reprehenderit ex deleniti cum facilis exercitationem illum consequatur harum quia quidem, doloribus omnis ipsum ut fuga!</p>
+                <h1 class="card_title">Why Go Out?</h1>
+                <p class="card_text">I wonder why I am up here on this stage when I’d rather be at home, when being at home would be so much more comforting. And I wonder why all of you are sitting there in the audience, when so many of you would also be happier at home.</p>
               </div>
             </div>
 
             <div class="card_post  shadow">
               <div class="card_img">
-                <img src="{{asset('image/about.jpg')}}" class="w-100" alt="">
+                <img src="{{asset('image/happy.jpeg')}}" class="w-100" alt="">
               </div>
               <div class="card_info">
                 <div class="card_date">
-                  <span> sunday  October   23   2021</span>
-                  <span class="nameReader">Name of Reader</span>
+                  <span> sunday  October   03   2021</span>
+                  <span class="nameReader">Yassin zraqe</span>
                 </div>
-                <h1 class="card_title">why should we read ?</h1>
-                <p class="card_text"> Lorem ipsum dolor sit amet consectetur adipisicing elit. Adipisci tempore mollitia vel dolor obcaecati reprehenderit ex deleniti cum facilis exercitationem illum consequatur harum quia quidem, doloribus omnis ipsum ut fuga!</p>
+                <h1 class="card_title">WHAT MAKES US HAPPY?</h1>
+                <p class="card_text">For 72 years, researchers at Harvard have been examining this question, following 268 men who entered college in the late 1930s through war, career, marriage and divorce, parenthood and grandparenthood, and old age. Here, for the first time, a journalist gains access to the archive of one of the most comprehensive longitudinal studies in history. Its contents</p>
               </div>
             </div>
 

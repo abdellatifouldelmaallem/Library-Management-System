@@ -55,11 +55,11 @@ public function AllLibraries(){
      return redirect('/dashboard/articles');
  }
 
- // for books
- public function AllBooks(){
-     $books = book::with('library')->get();
-      return view('admin.allBooks',compact('books'));
- }
+//  // for books
+//  public function AllBooks(){
+//      $books = book::with('library')->get();
+//       return view('admin.allBooks',compact('books'));
+//  }
 
 
 
